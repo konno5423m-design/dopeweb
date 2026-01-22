@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  color: #222;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== レイアウトの基本幅 ===== */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* ===== ファーストビュー ===== */
+.hero {
+    background-image: url(../images/tidorigara2.png);
+
+    background-size: cover;
+    background-position: center;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+}
+.notes {
+  padding: 40px 0;
+  background: #f7f7f7;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.note {
+  background: #fff6a8;
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  transform: rotate(-1deg);
+}
+
+.note:nth-child(2) {
+  transform: rotate(1deg);
+}
+.note:nth-child(3) {
+  transform: rotate(-2deg);
+}
+.note:nth-child(4) {
+  transform: rotate(2deg);
+}
+
+#junnbi {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d96c4;
+  margin: 60px 0;
+}
