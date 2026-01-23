@@ -34,9 +34,8 @@ img {
 
 .hero h1 {
   font-size: 2rem;
-  line-height: 1.4rem
-  margin-top: 80px;
- 
+  line-height: 2rem;
+  margin-left: 90px;
 }
 
 .hero p {
