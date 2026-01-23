@@ -22,15 +22,110 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 /* ===== ファーストビュー ===== */
 .hero {
-    background-image: url(../images/tidorigara2.png);
-
+    background-image: url(../images/grid2.png);
     background-size: cover;
     background-position: center;
   padding: 80px 0;
+ 
 }
+
+.hero h1 {
+  font-size: 39px;
+  line-height: 3.5rem;
+  margin-bottom:200px;
+  position: relative;
+  z-index: 2
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #555;
+   text-align: center;
+   margin-top: 0 px;
+}
+ .hero {
+    padding: 60px 0;
+  }
+
+/* ===== メモ風デザイン ===== */
+.notes {
+  padding: 40px 0;
+  background: none;
+  display: float;
+  margin-top: -310px;
+  z-index: 1;
+  position: relative;
+ 
+
+
+}
+
+.note-list {
+ list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ← スマホ2列 */
+  gap: 16px;
+}
+
+.note {
+  background: #d2bf0d;
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  transform: rotate(-1deg);
+    animation: drop 0.7s ease-out both;
+}
+.note:nth-child(1) {
+  background: #d2bf0d;
+  transform: rotate(1deg);
+   animation-delay: 0.6s;
+}
+
+.note:nth-child(2) {
+  background: #26949e;
+  transform: rotate(1deg);
+   animation-delay: 0.1s;
+}
+.note:nth-child(3) {
+    background: #40d37b;
+
+  transform: rotate(-2deg);
+    animation-delay: 1.2s;
+}
+.note:nth-child(4) {
+      background: #c78989;
+
+  transform: rotate(2deg);
+    animation-delay: 0.9s;
+}
+.note:hover {
+  animation-duration: 2s;
+}
+
+
+table th, table td {
+  border: solid 1px black;
+}
+
+
+@media screen and (min-width:480px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
 
 .hero h1 {
   font-size: 5rem;
@@ -46,18 +141,14 @@ img {
 }
  .hero {
     padding: 60px 0;
+    min-height: 600px;
+    background-size: contain;
   }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
+  
 .notes {
   padding: 40px 0;
-  background: #f7f7f7;
+  background: none;
+    margin-top: -200px;
 }
 
 .note-list {
@@ -88,24 +179,46 @@ img {
 .note:nth-child(4) {
   transform: rotate(2deg);
 }
-
-#junnbi {
-  text-align: center;
-  font-size: 2rem;
-  color: #0d96c4;
-  margin: 60px 0;
 }
 
 
 
-@media screen and (min-width:480px) {
-    /*　画面サイズが480pxからはここを読み込む　*/
 
-}
-@media screen and (min-width:768px) and ( max-width:1024px) {
-    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
 
+
+
+
+
+
+
+
+
+
+@keyframes sway {
+  0% {
+    transform: rotate(-1deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1deg) translateY(-4px);
+  }
+  100% {
+    transform: rotate(-1deg) translateY(0);
+  }
 }
-@media screen and (min-width:1024px) {
-    /*　画面サイズが1024pxからはここを読み込む　*/
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) rotate(-3deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) rotate(1deg);
+  }
+  80% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
