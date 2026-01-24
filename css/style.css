@@ -26,13 +26,14 @@ img {
 
 /* ===== ファーストビュー ===== */
 .hero {
+  padding: 10px 0;
       background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
 
     background-size: cover;
     background-position: center;
  display: flex;
   flex-direction: column;
-     min-height: 90vh;
+     min-height: 80vh;
         position: relative;
 }
 .container {
@@ -40,7 +41,6 @@ img {
     position: relative;
     gap: 1rem;
   width: 100%;
-     min-height: 100vh;
     box-sizing: border-box;
     z-index: 0;
 
@@ -49,10 +49,10 @@ img {
 }
 
 .hero h2 {
+   padding-top: 0;
+  margin-top: 0;
   font-size: 2.1rem;
   line-height: 2.5rem;
-  padding-top: 10%;
-padding-left: 5%;
 }
 
 .hero p {
@@ -87,6 +87,7 @@ animation-delay: 1s, 2.4s;
   line-height: 1.4;
   box-shadow:
     0 6px 12px rgba(0,0,0,0.15),
+    0 2px 4px rgba(0,0,0,0.08);
   border-radius: 3px;
   transform: translateY(-10px) rotate(-2deg);
  
@@ -307,6 +308,3 @@ h1{
 table th, table td {
   border: solid 1px black;
 }
-
-
-
