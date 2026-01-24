@@ -14,6 +14,10 @@
      display: flex;
   
 }
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 800;}
 .hero h2 {
   font-size: 3.5rem;
   line-height: 3.5rem;
@@ -59,7 +63,7 @@
 
 
 .catchphrase{
-  height: 500px;
+  height: 380px;
   background-color: #ffffff;
   text-align: center;
 }

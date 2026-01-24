@@ -32,7 +32,7 @@ img {
     background-position: center;
  display: flex;
   flex-direction: column;
-     min-height: 100vh;
+     min-height: 90vh;
         position: relative;
 }
 .container {
@@ -136,9 +136,9 @@ opacity:50%;
 }
 
 h1{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 800;
-  margin: 80px 20px 20px 20px;
+  margin: 30px 20px 20px 20px;
   word-break: keep-all;
 
 }
@@ -146,13 +146,13 @@ h1{
 
 
 .catchphrase{
-  height: 100vh;
+  height: 90vh;
   background-color: #ffffff;
   z-index: 10;
   text-align: center;
 }
 .tobe{
-   padding: 80px 20px;
+   padding: 30px 20px;
   background-color: #cccccc;
   height: 400px;
   clip-path: polygon(
