@@ -3,6 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
+html, body {
+  overflow-x: hidden;
+}
+
+
 html {
   font-size: 18px;
 }
@@ -27,26 +32,27 @@ img {
     background-position: center;
  display: flex;
   flex-direction: column;
-     height: 100vh;
+     min-height: 100vh;
         position: relative;
 }
 .container {
     background-size: cover;
     position: relative;
     gap: 1rem;
-    width: 100%;
+  width: 100%;
      min-height: 100vh;
     box-sizing: border-box;
     z-index: 0;
 
-  padding: 4rem;
+  padding: 20px;
   margin: 0 auto;
 }
 
 .hero h2 {
   font-size: 2.1rem;
   line-height: 2.5rem;
-margin-left: 5%;
+  padding-top: 10%;
+padding-left: 5%;
 }
 
 .hero p {
@@ -64,7 +70,6 @@ margin-left: 5%;
 .note-list {
  list-style: none;
   padding: 30px;
-  margin:  auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* ← スマホ2列 */
   gap: 16px;
@@ -82,13 +87,12 @@ animation-delay: 1s, 2.4s;
   line-height: 1.4;
   box-shadow:
     0 6px 12px rgba(0,0,0,0.15),
-    0 2px 4px rgba(0,0,0,0.08);
   border-radius: 3px;
   transform: translateY(-10px) rotate(-2deg);
  
 }
 #note1{
-   background: rgba(221, 107, 107, 0.55);
+   background: rgba(10, 45, 91, 0.55); 
  color:#ffffff;
   transform: rotate(-3deg)
 
@@ -102,14 +106,14 @@ animation-delay: 1s, 2.4s;
 
 }
 #note3 {
- background: rgba(55, 145, 76, 0.55); 
+ background: rgba(64, 55, 145, 0.55); 
  color:#ffffff; 
  transform: rotate(1deg); 
 }
 
 #note4 {
- background: #fff25d8c; 
- color:#454545; 
+ background:rgba(60, 60, 98, 0.55);
+ color:#ffffff; 
  transform: rotate(3deg); 
 }
 @media (hover: hover) {
@@ -134,14 +138,18 @@ opacity:50%;
 h1{
   font-size: 1.5rem;
   font-weight: 800;
+  margin: 80px 20px;
+  word-break: keep-all;
+
 }
 
 
 
 .catchphrase{
-  height: 300px;
+  height: 100vh;
   background-color: #ffffff;
   z-index: 10;
+  text-align: center;
 }
 .tobe{
   padding: 80px 20px;
