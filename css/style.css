@@ -14,10 +14,16 @@ html {
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
-  line-height: 1.7;
   color: #222;
   background-image: url(../images/back/tidorigara2.png);
+  line-height: 0;
 }
+ p, h2, h3,li{
+  margin-top: 0;
+    line-height:1.7;
+
+}
+
 
 img {
   max-width: 100%;
@@ -26,14 +32,16 @@ img {
 
 /* ===== ファーストビュー ===== */
 .hero {
-  padding: 10px 0;
+  margin-top: 0;
+  padding-top: 0;
       background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
 
     background-size: cover;
     background-position: center;
  display: flex;
   flex-direction: column;
-     min-height: 80vh;
+      min-height: 100svh;
+    justify-content: center;
         position: relative;
 }
 .container {
@@ -68,6 +76,7 @@ img {
   
 /* ===== メモ風デザイン ===== */
 .note-list {
+  margin: 0 auto;
  list-style: none;
   padding: 30px;
   display: grid;
@@ -141,20 +150,22 @@ h1{
   font-weight: 800;
   margin: 30px 20px 20px 20px;
   word-break: keep-all;
-
+line-height: 1.7;
 }
 
 
 
 .catchphrase{
-  height: 90vh;
+    height: auto;
+  min-height: 100vh;
   background-color: #ffffff;
   z-index: 10;
   text-align: center;
+  padding: 60px 0px;
 }
 .tobe{
    padding: 30px 20px;
-  background-color: #cccccc;
+  background-color: #e3e3e3;
   height: 400px;
   clip-path: polygon(
     0 0,
@@ -165,19 +176,52 @@ h1{
   );
 }
 
+.tobe h2{
+ position: relative;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.tobe li{
+      list-style: none;
+}
+.tobe-item{
+
+  background: linear-gradient(transparent 65%, rgba(255, 235, 59, 0.6) 65%);
+}
 
 
 .plan{
-	background-color: #bfffea;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	height: 300px;
+	height: auto;
+}
+.plan h2{
+  color: #7d7d7d;
+  font-size: 1rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.plan h2::before{
+ position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fef5c3;
+    font-size: 90px;
+    text-transform: uppercase;
+    content: 'service';
+    z-index: -1;
 }
 .container4 {
   padding: 50px 0;
 
-    background-image: url(../images/back/tidorigara2.png);
     background-size: cover;
     position: relative;
     display: flex;
@@ -305,6 +349,3 @@ h1{
   transform: rotate(0.5deg);
 }
 
-table th, table td {
-  border: solid 1px black;
-}
