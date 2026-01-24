@@ -1,10 +1,84 @@
+.comparison{
+    line-height: 1;
+
+}
 
 
 
 
+.table {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #353535;
+}
 
+.table thead {
+    background: #999;
+    color: #fff;
+}
 
-table th, table td {
-  border: solid 1px black;
-  line-height: 1.7;
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.table tr:nth-child(2n) td {
+    background-color: #fafafa;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    border-left: 5px solid #EF8633;
+    border-right: 5px solid #EF8633;
+}
+
+.table tr:first-child th:first-child {
+    position: relative;
+    border-top: 15px solid #EF8633;
+    background-color: #EF8633;
+
+}
+
+.table tr:first-child th:first-child::before {
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.2rem 1rem;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    color: #EF8633;
+    font-size: 0.8rem;
+    content: '人気';
+}
+
+.table tr:last-child td:first-child {
+    border-bottom: 5px solid #EF8633;
+}
+
+.star{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #353535;
+}
+
+.star thead {
+    background: #efefef;
+}
+
+.star th,
+.star td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.star td:nth-child(2) {
+    background-color: #3B9BDC;
+    color: #fff;
 }

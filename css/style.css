@@ -191,7 +191,7 @@ line-height: 1.7;
 }
 .tobe-item{
 
-  background: linear-gradient(transparent 65%, rgba(255, 235, 59, 0.6) 65%);
+  background: linear-gradient(transparent 65%, rgba(255, 211, 139, 0.6) 65%);
 }
 
 
@@ -272,7 +272,6 @@ line-height: 1.7;
     backdrop-filter: blur(0);
     -webkit-backdrop-filter: blur(0);
 }
-
 
 .card-box {
     padding: 1rem;
