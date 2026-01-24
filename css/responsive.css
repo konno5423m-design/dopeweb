@@ -1,0 +1,73 @@
+
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+
+      .make-cards {
+     display: grid;
+      }
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+
+      .make-cards {
+     display: flex;
+  
+}
+.hero h2 {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: #555;
+   text-align: center;
+   margin-top:  100px;
+   opacity: 0;
+  animation:
+   fadeIn 1s ease-out forwards,
+}
+
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.note {
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  border-radius: 4px;
+   box-shadow:
+    0 6px 12px rgba(0,0,0,0.15),
+    0 2px 4px rgba(0,0,0,0.08);
+  border-radius: 3px;
+
+}
+
+.note:hover {
+  animation: wiggle 0.3s ease-in-out;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.18);
+}
+
+
+.catchphrase{
+  height: 500px;
+  background-color: #ffffff;
+  text-align: center;
+}
+  .container4 {
+    padding: 50px 30px;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: stretch; 
+    gap: 40px;
+  }
+  }  
