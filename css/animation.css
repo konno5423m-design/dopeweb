@@ -45,3 +45,18 @@
     transform: translateY(0px);
   }
 }
+
+
+
+@keyframes boxAnime {
+    to {
+        box-shadow: 0px 0px 10px #545454;
+        opacity: 1;
+    }
+}
+
+@keyframes containerAnime {
+    to {
+        filter: brightness(.5) blur(2px);
+    }
+}

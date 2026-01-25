@@ -1,8 +1,7 @@
 .comparison{
     line-height: 1;
-
+    font-size: 0.9rem;
 }
-
 
 
 
@@ -30,20 +29,20 @@
     background-color: #fafafa;
 }
 
-.table th:nth-child(1),
-.table td:nth-child(1) {
+.table th:nth-child(2),
+.table td:nth-child(2) {
     border-left: 5px solid #EF8633;
     border-right: 5px solid #EF8633;
 }
 
-.table tr:first-child th:first-child {
+.table tr:first-child th:nth-child(2) {
     position: relative;
     border-top: 15px solid #EF8633;
     background-color: #EF8633;
 
 }
 
-.table tr:first-child th:first-child::before {
+.table tr:first-child th:nth-child(2)::before {
     position: absolute;
     top: -0.65rem;
     left: 50%;
@@ -53,10 +52,10 @@
     background-color: #fff;
     color: #EF8633;
     font-size: 0.8rem;
-    content: '人気';
+    content: '';
 }
 
-.table tr:last-child td:first-child {
+.table tr:last-child td:nth-child(2) {
     border-bottom: 5px solid #EF8633;
 }
 
@@ -78,7 +77,166 @@
     padding: 10px;
 }
 
-.star td:nth-child(2) {
-    background-color: #3B9BDC;
-    color: #fff;
+
+
+
+:root {
+    --background-img: url(../images/back/kasa.jpg);
 }
+
+.container5 {
+    display: grid;
+    place-content: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--background-img);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.container5::before {
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    content: '';
+    z-index: -1;
+    animation: containerAnime 1.5s 1s forwards ease-in-out;
+}
+
+
+
+.box {
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 200px;
+    box-shadow: none;
+    background-image: linear-gradient(rgba(0, 0, 0, .3) 0 100%), var(--background-img);
+    background-position: center;
+    background-size: cover;
+    animation: boxAnime 1.5s 2s forwards ease-in;
+    opacity: 0;
+}
+
+.box-title {
+    margin: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.about{
+    margin: 0;
+padding: 50px 20px;
+
+
+
+        display: grid;
+    place-content: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    z-index: 0;
+
+}
+
+
+.plan{
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: auto;
+}
+.plan h2{
+  color: #7d7d7d;
+  font-size: 1rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.plan h2::before{
+ position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fef5c3;
+    font-size: 80px;
+    text-transform: uppercase;
+    content: 'IITOKORO';
+    z-index: -1;
+}
+.container4 {
+  padding: 50px 0;
+
+    background-size: cover;
+    position: relative;
+    display: flex;
+        flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    z-index: 0;
+
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 2px solid rgba(255, 255, 255, .3);
+    background: rgba(232, 255, 255, .5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+    background-clip: border-box;
+    border: 0;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    transition: .5s;
+    width: 80%;
+}
+
+
+.card-image {
+    margin: 2rem;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit:contain ;
+}
+
+
+.card:hover {
+    box-shadow: 0 8px 32px 0 #353535;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+}
+
+.card-box {
+    padding: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-description {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+

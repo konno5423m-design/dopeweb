@@ -11,6 +11,9 @@
       <link rel="stylesheet" href="css/animation.css">
       <link rel="stylesheet" href="css/responsive.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="js/aos.js" defer></script>
+<script src="js/main.js" defer></script>
+
 </head>
 <body>
   <section class="hero">
@@ -27,7 +30,7 @@
     </section>
 
   <section class="catchphrase" >
-<div  data-aos="fade-up" >
+<div>
      <ul class="note-list">
       <li class="note" id="note1">ホームページ、<br>3年前から放置</li>
       <li class="note" id="note2">自分で作ったけど<br>なんか微妙</li>
@@ -42,7 +45,7 @@
   </section>
   
 <section class="tobe">
-  <h2>見やすいホームページになることで</h2>
+  <h2>見やすい<br>ホームページに<br>なることで</h2>
   <div class="container3">
   <ul class="tobe-list">
 <li><i class="fa-regular fa-circle-check"></i><span class="tobe-item">名刺代わりに紹介できる</span></li>
@@ -52,11 +55,48 @@
   </ul>
 </div> 
 </section>
+<section class="menu">
+<div class="l-wrapper_06">
+<a href="#">
+  <div class="card_06">
+  <div class="card-content_06"> <i class="fa-solid fa-pen-to-square"></i>
+    <p class="card-title_06">手直しプラン</p>
+    <p class="card-text_06">WebデザインやWebサイト制作、最新のWeb業界情報などを紹介していくサイト。<br>しっかりきっかり更新中。</p>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="card_06">
+  <div class="card-content_06">  <i class="fa-solid fa-folder-open"></i>
+    <p class="card-title_06">整理プラン</p>
+    <p class="card-text_06">WebデザインやWebサイト制作、最新のWeb業界情報などを紹介していくサイト。<br>しっかりきっかり更新中。</p>
+  </div>
+  </div>
+</a>
+<a href="#">
+<div class="card_06">
+  <div class="card-content_06"><i class="fa-solid fa-wand-magic-sparkles"></i>
+    <p class="card-title_06">新規作成プラン </p>
+    <p class="card-text_06">WebデザインやWebサイト制作、最新のWeb業界情報などを紹介していくサイト。<br>しっかりきっかり更新中。</p>
+  </div>
+</div>
+</a>
+</div>
+
+      <div class="option">
+      <h3>オプション</h3>
+      <ul class="option-list">
+        <li class="option-item">写真調整</li>
+        <li class="option-item">問い合わせ導線強化</li>
+        <li class="option-item">文章おまかせ</li>
+      </ul>
+      </div>
+      </section>
 <section class="plan">
   <h2>サービス</h2>
   <div class="container4">
         <div class="card pic-image">
-            <img class="card-image" src="https://pa-tu.work/storage/img/posts/65167fdc3f775.jpg">
+            <img class="card-image" src="images/hito/kaiwa.jpg">
             <div class="card-box">
                 <h3 class="card-title">手直しプラン</h3>
                                 <h4>2,000円～</h4>
@@ -65,7 +105,7 @@
             </div>
         </div>
         <div class="card pic-image">
-            <img class="card-image" src="https://pa-tu.work/storage/img/posts/65167fdc3f775.jpg">
+            <img class="card-image" src="images/hito/sigoto.jpg">
             <div class="card-box">
                 <h3 class="card-title">整理プラン</h3>
                 <h4>50,000円</h4>
@@ -73,7 +113,7 @@
             </div>
         </div>
         <div class="card pic-image">
-            <img class="card-image" src="https://pa-tu.work/storage/img/posts/65167fdc3f775.jpg">
+            <img class="card-image" src="images/hito/osieru.jpg">
             <div class="card-box">
                 <h3 class="card-title">新規製作プラン</h3>
                                 <h4>10,0000円</h4>
@@ -83,29 +123,21 @@
         </div>
     </div>
 </section>
-      <div class="option">
-      <h3>オプション</h3>
-      <ul class="option-list">
-        <li class="option-item">写真調整</li>
-        <li class="option-item">問い合わせ導線強化</li>
-        <li class="option-item">文章おまかせ</li>
-      </ul>
-      </div>
 
 
 <section class="comparison">
 <h2>特徴</h2>
 <table class="table">
   <tr>
-    <th>比較ポイント</th>
+    <th>Span></span></th>
     <th>当サービス</th>
-    <th>格安テンプレ型</th>
+    <th>テンプレ型</th>
     <th>制作会社</th>
   </tr>
   <tr>
     <td>初期費用</td>
     <td>10万円～</td>
-    <td></td>
+    <td>3～5万円</td>
     <td>25～50万円</td>
   </tr>
   <tr>
@@ -138,44 +170,26 @@
     <td>自己責任</td>
     <td>保守契約必須</td>
   </tr>
-</table>
-
-<table class="star">
-  <tr>
-    <th></th>
-    <th>当サービス</th>
-    <th>格安テンプレ型</th>
-    <th>制作会社</th>
-  </tr>
-  <tr>
-    <td>価格</td>
-    <td>★★★★</td>
-    <td>★★★★★</td>
-    <td>★★★</td>
-
-  </tr>
-  <tr>
-    <td>デザイン自由度 </td>
-    <td>★★★★★</td>
-    <td>★★</td>
-    <td>★★★★★</td>
-  </tr>
-  <tr>
-    <td>相談しやすさ</td>
+<tr>
+      <td>相談しやすさ</td>
     <td>★★★★★</td>
     <td>★★</td>
     <td>★★★★</td>
-  </tr>
-  <tr>
-  </tr>
+    </tr>
 </table>
+<small>※他社料金設定は一例です</small>
+
 </section>
 
-<section class="customer">
-  <h2>当サービスの最大の特徴</h2>
+<section class="container5">
+<div class="box">
+    <h2 class="box-title">背景をぼかして同じ画像を重ねる</h2>
+</section>
+<section class="plan">
+  <h2>IITOKORO</h2>
     <div class="container6">
       <ul class="customer-list">
-        <li class="customer-item">丁寧にお聞きします<p>制作会社や格安サービスにはない親しみやすさで安心してご相談いただけます</p></li>
+        <li class="customer-item" data-aos="fade-right">丁寧にお聞きします<p>制作会社や格安サービスにはない親しみやすさで安心してご相談いただけます</p></li>
         <li class="customer-item">画像</li>
         <li class="customer-item">意識して創る<p>ホームページの利便性はもちろん
 イメージや雰囲気が伝わるよう意識し
@@ -183,10 +197,11 @@
         <li class="customer-item">作ったままにしない<p>メンテナンスやサイト運用のアドバイスアフターフォローサービスもご用意しております</p></li>
       </ul>
     </div>
+    </div>
 </section>
 
 <section class="make">
-  <h2>制作にあたって</h2>
+  <h2>kanngaekata</h2>
   <p class="make-lead">
     増やす前に、まずは減らす。<br>
     ほんの少し整えるだけで、サイトは見やすくなります。
