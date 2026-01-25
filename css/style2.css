@@ -44,15 +44,15 @@
 
 .table tr:first-child th:nth-child(2)::before {
     position: absolute;
-    top: -0.65rem;
+    top: 0.2rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 0.2rem 1rem;
     border-radius: 0.3rem;
     background-color: #fff;
     color: #EF8633;
-    font-size: 0.8rem;
-    content: '';
+    font-size: 1rem;
+    content: '当サービス';
 }
 
 .table tr:last-child td:nth-child(2) {
@@ -192,5 +192,19 @@ text-align: center;
 .card-description {
     margin-bottom: 0.5rem;
     line-height: 1.5;
+}
+
+.comparison h2{
+     position: relative;
+    padding: 0.5rem 0 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 26px;
+    background: linear-gradient(90deg, #b2d5de 0% 50%, #353535 50%);
+    background-repeat: no-repeat;
+    background-size: 4rem 0.2rem;
+    background-position: bottom;
+    color: #353535;
+    text-align: center;
 }
 

@@ -30,6 +30,8 @@ img {
   height: auto;
 }
 
+
+
 /* ===== ファーストビュー ===== */
 .hero {
   margin-top: 0;
@@ -329,7 +331,7 @@ padding: 10px;
   inset: 0;
       background-attachment: fixed;
 
-  background-image: url("../images/back/kiiro.jpg");
+  background-image: url(../images/back/kiiro.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0.5;
