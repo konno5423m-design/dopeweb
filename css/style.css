@@ -154,12 +154,12 @@ line-height: 1.5;
   display: inline-block;
     position: relative;
     padding: 30px 20px;
-    margin: 2%;
+    margin: 1rem;
     border-radius: 5px;
     border: 3px solid #333;
     color: #333;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 3rem;
     text-align: center;
       word-break: keep-all;
  
@@ -222,7 +222,7 @@ h1:after {
 }
 .do{
   background-image: url(../images/back/shell.jpg);
-  background-position: center;
+  background-position: left;
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -233,15 +233,20 @@ h1:after {
 .dolist{
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 
 }
-.contener9 {
+
+  .contener9{
+  flex: 1 1 420px;
+  max-width: 480px;
+  margin: 0;
+
   padding: 10px;
-   position: relative;
     justify-content: center;
-    min-width: 180px;
     word-wrap: break-word;
     border: 2px solid rgba(255, 255, 255, .3);
     background-clip: border-box;
@@ -250,8 +255,6 @@ h1:after {
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     transition: .5s;
- width: 280px; /* ちょい小さく */
-  margin: 10px;
 }
 .do h2{
     text-align: left;
@@ -316,12 +319,25 @@ h1:after {
 .menu{
 margin: 0;
 padding: 10px;
-  background-image: url(../images/back/kiiro.jpg);
-  background-size: cover;
-    background-attachment: fixed;
 	background-repeat: no-repeat;
   background-position: center;
 	position: relative;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+      background-attachment: fixed;
+
+  background-image: url("../images/back/kiiro.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.menu image{
+    opacity: 0.15; /* ← ここ調整 */
 }
 
 .menu i {
