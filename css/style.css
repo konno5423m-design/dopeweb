@@ -76,7 +76,7 @@ img {
   
 /* ===== メモ風デザイン ===== */
 .note-list {
-  margin: 0 auto;
+  margin: 20px auto;
  list-style: none;
   padding: 30px;
   display: grid;
@@ -108,8 +108,8 @@ animation-delay:2.4s;
 }
 
 #note2 {
- background: rgba(151, 162, 181, 0.55); 
- color:#616161; 
+ background: rgba(51, 88, 153, 0.55); 
+ color:#ffffff; 
  transform:
   rotate(-1deg);
 
@@ -144,34 +144,146 @@ opacity:50%;
   text-align: center;
 }
 
-h1{
-  font-size: 1.3rem;
+
+h1 {
+    font-size: 1.3rem;
   font-weight: 800;
   margin: 30px 20px 20px 20px;
-  word-break: keep-all;
-line-height: 1.7;
+line-height: 1.5;
+
+  display: inline-block;
+    position: relative;
+    padding: 30px 20px;
+    margin: 2%;
+    border-radius: 5px;
+    border: 3px solid #333;
+    color: #333;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+      word-break: keep-all;
+ 
 }
 
 
+h1:before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 20px;
+    background-color: #fff;
+    content: "";
+}
+
+h1:after {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+    content: "";
+}
 
 .catchphrase{
     height: auto;
-  min-height: 50vh;
+  min-height: 90vh;
   background-color: #ffffff;
   z-index: 10;
   text-align: center;
   padding: 60px 0px;
 }
+.catchphrase h2{
+  font-size: 1.2rem;
+  display: inline;
+  padding-bottom: 7px;
+    margin-bottom: 0.2rem;
+    background-image: linear-gradient(90deg, #b2d5de 0 20%, #dedede 20%);
+    background-repeat: no-repeat;
+    background-size: 100% 10%;
+    background-position: bottom;
+    color: #323232;
+    font-weight: bold;
+}
+
+
 
 .catchphrase p{
-  font-size: 0.7rem;
+  margin-top: 10px;
+  font-size: 0.8rem;
 }
 .tobe{
    padding: 30px 20px;
-  background-color: #ebebeb;
   text-align: center;
 
 }
+.do{
+  background-image: url(../images/back/shell.jpg);
+  background-position: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+  
+}
+
+.dolist{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+}
+.contener9 {
+  padding: 10px;
+   position: relative;
+    justify-content: center;
+    min-width: 180px;
+    word-wrap: break-word;
+    border: 2px solid rgba(255, 255, 255, .3);
+    background-clip: border-box;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    transition: .5s;
+ width: 280px; /* ちょい小さく */
+  margin: 10px;
+}
+.do h2{
+    text-align: left;
+  color: #3c3c3c;
+  font-size: 1.7rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+}
+.do h2::before{
+    white-space: nowrap;
+    position: absolute;
+    top: -50px;
+    left:-30px;
+    color: #faf29b;
+    font-size: 3rem;
+    text-transform: uppercase;
+    content: 'DEKIRUKOTO';
+    z-index: -1;
+}
+
+.do h3{
+  font-size: 20px;
+}
+
+.do ul{
+  font-size: 0.8rem;
+}
+
+
 
 .tobe h2{
   
@@ -193,7 +305,7 @@ line-height: 1.7;
 
 .tobe li{
   text-align: left;
-  margin: 0;
+  margin: 10px;
 
 }
 .tobe-item{
@@ -210,22 +322,12 @@ padding: 10px;
 	background-repeat: no-repeat;
   background-position: center;
 	position: relative;
-	&::before{
-		content: "";
-		width: 100%;
-		height: 60px;
-		position: absolute;
-		top:-1px;
-    left:-1px;
-    background-color: #ebebeb;
-		clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
+}
 
-}
-}
 .menu i {
   font-size: 2.2rem;
   margin-bottom: 12px;
-  color: #7172ac; /* 今のサイトのトーンに近いやつ */
+  color: #7172ac; 
 }
 .menu a{
 text-decoration: none;
@@ -312,6 +414,8 @@ display: inline;
 .make {
   padding: 80px 20px;
   text-align: center;
+
+
 }
 .make h2{
     text-align: left;
@@ -379,4 +483,3 @@ display: inline;
   transform: rotate(0.5deg);
 }
 
-}

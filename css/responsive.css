@@ -73,9 +73,14 @@ h1{
     align-items: stretch; 
     gap: 40px;
   }
-  }  
+ 
 .l-wrapper_06 {
   flex-direction: row;
   margin: 1rem auto;
   gap:20px;
 }
+
+.dolist{
+display:flex;
+}
+ }  
