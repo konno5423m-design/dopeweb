@@ -80,60 +80,10 @@
 
 
 
-:root {
-    --background-img: url(../images/back/kasa.jpg);
-}
-
-.container5 {
-    display: grid;
-    place-content: center;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: var(--background-img);
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-}
-
-.container5::before {
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    content: '';
-    z-index: -1;
-    animation: containerAnime 1.5s 1s forwards ease-in-out;
-}
-
-
-
-.box {
-    display: grid;
-    place-content: center;
-    width: 400px;
-    height: 200px;
-    box-shadow: none;
-    background-image: linear-gradient(rgba(0, 0, 0, .3) 0 100%), var(--background-img);
-    background-position: center;
-    background-size: cover;
-    animation: boxAnime 1.5s 2s forwards ease-in;
-    opacity: 0;
-}
-
-.box-title {
-    margin: 0;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: serif;
-}
 
 .about{
     margin: 0;
-padding: 50px 20px;
-
-
-
+padding: 30px 0px;
         display: grid;
     place-content: center;
     position: relative;
@@ -145,32 +95,36 @@ padding: 50px 20px;
 }
 
 
-.plan{
+.about{
+text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
 	height: auto;
 }
-.plan h2{
-  color: #7d7d7d;
-  font-size: 1rem;
+.about h2{
+    text-align: left;
+  color: #3c3c3c;
+  font-size: 1.7rem;
   margin: 40px;
   font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
 }
-.plan h2::before{
- position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fef5c3;
-    font-size: 80px;
+.about h2::before{
+    white-space: nowrap;
+    position: absolute;
+    top: -50px;
+    left:-30px;
+    color: #faf29b;
+    font-size: 3rem;
     text-transform: uppercase;
-    content: 'IITOKORO';
+    content: '選ばれる理由';
     z-index: -1;
 }
 .container4 {
-  padding: 50px 0;
+  padding: 20px 0;
 
     background-size: cover;
     position: relative;
@@ -179,7 +133,7 @@ padding: 50px 20px;
 
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
