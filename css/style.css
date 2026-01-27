@@ -13,14 +13,14 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-family: 'Hiragino Kaku' 'Gothic ProN', 'Noto Sans JP', 'Yu Gothic', 'sans-serif','Pretendard';
   color: #222;
   background-image: url(../images/back/tidorigara2.png);
-  line-height: 0;
+  line-height: 1.7;
   padding-top: 90px;
 }
 
- p, h2, h3,li{
+ p, h2, h3,h4,h5,li{
   margin: 0;
     line-height:1.7;
 
@@ -38,14 +38,14 @@ img {
 .hero {
   margin-top: -90px;
   padding-top: 0;
- display: flex;
+  padding-bottom: 40px;
   flex-direction: column;
-      min-height: 90vh;
+      max-height: 90vh;
     justify-content: center;
-        position: relative;
         background: none;
-         overflow: hidden;
-         z-index: 0;
+  overflow: visible;
+           z-index: 0;
+         position: relative;
         }
 .hero > * {
   position: relative;
@@ -56,51 +56,51 @@ img {
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 60%, 30% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 40%, 25% 100%, 0 100%, 0 0);
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
   background-size: cover;
   background-position: center;
 }
 .container {
-    background-size: cover;
     position: relative;
     gap: 1rem;
   width: 100%;
-    box-sizing: border-box;
     z-index: 0;
-
-  padding: 30px;
+padding-top: 90px;
+padding-left: 50px;
 }
 
 .hero h2 {
   font-size: clamp(2rem, 5vw, 4rem) ;
-  font-weight:100;
+  font-weight:lighter;
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
-    transform: translateY(clamp(10px, 5vw, 60px));
-justify-content: center;
-   padding-top: 10px;
-   padding-left: 30px;
-  margin-top: 0;
+  margin-top: 0px;
+  padding-top: 40px;
 }
 
 .comment {
-  font-size: 13px;
+  text-align: center;
+  font-size: 14px;
   color: #2a2a2a;
-   margin-top:  10%;
-   padding-left: 50px;
+   padding-top:  20px;
    opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
     animation-delay:  0.3s;
 }
 
 .introduce{
+  font-family: 'Pretendard';
   z-index: 1;
-  font-weight: 500;
-font-size: clamp(1.7rem, 5vw, 4rem) ;
+  font-weight: 600;
+font-size: clamp(1.7rem, 5vw, 5rem) ;
   position: relative;
   text-align: right;
-  margin-right: 10%;
+  margin-right: 20px;
+}
+
+.introduce2{
+  margin-right:10px;
 }
 
 /* ===== メモ風デザイン ===== */

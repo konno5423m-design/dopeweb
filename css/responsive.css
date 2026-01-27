@@ -15,12 +15,19 @@
   
 }
 
+
+.hero{
+  position: relative;
+  padding-bottom: 100px;
+  max-height: 98vh;
+}
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 50%, 55% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 20%, 35% 100%, 0 100%, 0 0);
 
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
@@ -29,13 +36,31 @@
 
 }
 
-
+.introduce{
+margin-top: -40px;
+margin-right: 50px;
+}
 h1{
   font-size: 1.5rem;
   font-weight: 800;
 }
 
+.introduce2{
+  margin-right: 60px;
+}
+
+.container {
+    position: relative;
+    gap: 1rem;
+  width: 100%;
+    z-index: 0;
+}
+
+
+
+
 .comment  {
+  margin-right: 800px;
   font-size: 18px;
   color: #3d3d3d;
    opacity: 0;
