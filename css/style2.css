@@ -1,28 +1,33 @@
 .comparison{
     line-height: 1;
     font-size: 0.9rem;
+     overflow-x: scroll;
 }
 
 
 
 .table {
     margin-bottom: 30px;
-    width: 100%;
     text-align: center;
     border-collapse: collapse;
     border-spacing: 0;
     color: #353535;
+    width: 200px;
+  height: 400px;
+  white-space: nowrap;
+  object-fit: inherit;
 }
-
 .table thead {
     background: #999;
     color: #fff;
+    width: 150px;
 }
 
 .table th,
 .table td {
     border: 1px solid #ccc;
     padding: 10px;
+     flex-shrink: 0;
 }
 
 .table tr:nth-child(2n) td {
@@ -47,6 +52,20 @@
     border-bottom: 5px solid #EF8633;
 }
 
+
+.table::-webkit-scrollbar {
+  height: 14px; /* スクロールバーの高さ */
+}
+ 
+.table::-webkit-scrollbar-thumb {
+  background: #d2b48c; /* ツマミの色 */
+  border-radius: 7px; /* ツマミ両端の丸み */
+}
+ 
+.table::-webkit-scrollbar-track {
+  background: #f5deb3; /* トラックの色 */
+  border-radius: 7px; /* トラック両端の丸み */
+}
 .star{
     width: 100%;
     text-align: center;
@@ -197,25 +216,22 @@ text-align: center;
 }
 
 
-.standout-button {
+.ghost-button {
   display: block; /* ブロック要素指定 */
   width: 240px; /* 横幅を240pxに */
   box-sizing: border-box; /* 要素の幅と高さの計算にパディングとボーダーを含める */
-  text-align: center; /* テキストを中央配置に */
-  margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動で中央揃えに */
   padding: 1rem 1rem; /* パディングを1remに */
-  background-color: #244c92; /* 背景色を緑色に */
-  color: white !important; /* テキスト色を白に強制指定 */
+  margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動で中央揃えに */
+  border: 2px solid #222222; /* 細い境界線 */
+  background-color: transparent; /* 背景色を透明に */
+  color: #000000 !important; /* テキスト色 */
   font-weight: bold; /* テキストを太字に */
-  border: none; /* 境界線なし */
-  border-radius: 5px; /* 角の丸みを5pxに設定 */
-  border-bottom: 7px solid #30306d; /* ボタンの下側に影を作る */
-  transition: all 0.1s ease; /* ボタンの影の変化にアニメーションを設定 */
+  border-radius: 4px; /* 角の丸み */
+  text-align: center; /* テキストを中央配置に */
+  transition: all 0.1s ease; /* 背景色と境界線の色の変化にアニメーションを設定 */
 }
 
-.standout-button:hover {
-  background-color: #3eb69a; /* 同じ緑色 */
-  transform: translateY(4px); /* ボタンを下に少し動かす */
-  border-bottom: 7px solid transparent; /* border-bottomを透明にする */
+.ghost-button:hover {
+  background-color: #222222; /* ホバー時の背景色 */
+  color: white !important; /* ホバー時のテキスト色 */
 }
-
