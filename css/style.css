@@ -40,7 +40,7 @@ img {
   padding-top: 0;
  display: flex;
   flex-direction: column;
-      min-height: 100vh;
+      min-height: 90vh;
     justify-content: center;
         position: relative;
         background: none;
@@ -70,7 +70,7 @@ img {
     box-sizing: border-box;
     z-index: 0;
 
-  padding: 20px;
+  padding: 30px;
 }
 
 .hero h2 {
@@ -79,7 +79,7 @@ img {
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
     transform: translateY(clamp(10px, 5vw, 60px));
 justify-content: center;
-   padding-top: 50px;
+   padding-top: 10px;
    padding-left: 30px;
   margin-top: 0;
 }
