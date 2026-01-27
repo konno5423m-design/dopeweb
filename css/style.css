@@ -75,6 +75,7 @@ img {
 
 .hero h2 {
   font-size: clamp(2rem, 5vw, 4rem) ;
+  font-weight:100;
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
     transform: translateY(clamp(10px, 5vw, 60px));
 justify-content: center;
