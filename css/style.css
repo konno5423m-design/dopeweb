@@ -38,15 +38,29 @@ img {
 .hero {
   margin-top: -90px;
   padding-top: 0;
-      background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
-
-    background-size: cover;
-    background-position: center;
  display: flex;
   flex-direction: column;
       min-height: 100vh;
     justify-content: center;
         position: relative;
+        background: none;
+         overflow: hidden;
+         z-index: 0;
+        }
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  clip-path: polygon(100% 0, 100% 60%, 30% 100%, 0 100%, 0 0);
+  z-index: 0;
+  background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .container {
     background-size: cover;
@@ -60,24 +74,34 @@ img {
 }
 
 .hero h2 {
+  font-size: clamp(2rem, 5vw, 4rem) ;
+  line-height: clamp(2.4rem, 5vw, 5.5rem) ;
+    transform: translateY(clamp(10px, 5vw, 60px));
+justify-content: center;
    padding-top: 50px;
    padding-left: 30px;
   margin-top: 0;
-  font-size: 2.1rem;
-  line-height: 2.5rem;
 }
 
-.hero p {
-  font-size: 1rem;
-  color: #000000;
-   text-align: center;
-   margin-top:  100px;
+.comment {
+  font-size: 13px;
+  color: #2a2a2a;
+   margin-top:  10%;
+   padding-left: 50px;
    opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
     animation-delay:  0.3s;
 }
 
-  
+.introduce{
+  z-index: 1;
+  font-weight: 500;
+font-size: clamp(1.7rem, 5vw, 4rem) ;
+  position: relative;
+  text-align: right;
+  margin-right: 10%;
+}
+
 /* ===== メモ風デザイン ===== */
 .note-list {
   margin: 20px auto;
@@ -147,7 +171,6 @@ opacity:50%;
   color: #333;
   text-align: center;
 }
-
 
 .dope{
   text-align: center;
@@ -467,7 +490,7 @@ display: inline;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: '制作過程';
+    content: 'コンセプト';
     z-index: -1;
 }
 

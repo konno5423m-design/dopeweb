@@ -114,24 +114,32 @@ margin-right: 50px;
 
 @media (max-width: 900px) {
 
-
-  
   .header__navList {
+    text-align: right;
     display: flex; /* ←これはOK */
     flex-direction: column;
     position: fixed;
     top: 90px;
-    left: 50%;
+    right:1px;
     opacity: 0;
     visibility: hidden;
-    color: #000;
+    color: #ffffff;
+   height:250px;
+   width: 180px;
+   margin: 0;
   }
 
   .header__navList.is-open {
       transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    background-color: rgb(75, 114, 155);
+    height: fit-content;
+    margin: 0;
+    
   }
+      
+
 
 
 .header__navButton {
@@ -167,7 +175,10 @@ margin-right: 50px;
 .header__navList.is-open {
    opacity: 1; visibility: visible; transform: translateY(0); } 
 .header__navListItem { margin: 20px 0; text-align: center;
- } 
+margin: 10px 10px; 
+    font-size: 14px;
+
+} 
  .header__navButton.is-active .header__navButtonLineTop {
    transform: rotate(45deg);
    } 
