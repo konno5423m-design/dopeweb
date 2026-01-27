@@ -38,9 +38,9 @@ img {
 .hero {
   margin-top: -90px;
   padding-top: 0;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   flex-direction: column;
-      max-height: 90vh;
+      max-height: 95vh;
     justify-content: center;
         background: none;
   overflow: visible;
@@ -83,7 +83,7 @@ padding-left: 50px;
   text-align: center;
   font-size: 14px;
   color: #2a2a2a;
-   padding-top:  20px;
+   padding-top:  10px;
    opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
     animation-delay:  0.3s;
