@@ -19,7 +19,7 @@
 .hero{
   position: relative;
   padding-bottom: 100px;
-  max-height: 98vh;
+  min-height: 95vh;
 }
 
 .hero::before {

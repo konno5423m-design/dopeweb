@@ -196,3 +196,26 @@ text-align: center;
     text-align: center;
 }
 
+
+.standout-button {
+  display: block; /* ブロック要素指定 */
+  width: 240px; /* 横幅を240pxに */
+  box-sizing: border-box; /* 要素の幅と高さの計算にパディングとボーダーを含める */
+  text-align: center; /* テキストを中央配置に */
+  margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動で中央揃えに */
+  padding: 1rem 1rem; /* パディングを1remに */
+  background-color: #244c92; /* 背景色を緑色に */
+  color: white !important; /* テキスト色を白に強制指定 */
+  font-weight: bold; /* テキストを太字に */
+  border: none; /* 境界線なし */
+  border-radius: 5px; /* 角の丸みを5pxに設定 */
+  border-bottom: 7px solid #30306d; /* ボタンの下側に影を作る */
+  transition: all 0.1s ease; /* ボタンの影の変化にアニメーションを設定 */
+}
+
+.standout-button:hover {
+  background-color: #3eb69a; /* 同じ緑色 */
+  transform: translateY(4px); /* ボタンを下に少し動かす */
+  border-bottom: 7px solid transparent; /* border-bottomを透明にする */
+}
+
