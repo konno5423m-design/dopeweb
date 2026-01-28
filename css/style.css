@@ -103,6 +103,12 @@ font-size: clamp(1.7rem, 5vw, 5rem) ;
   margin-right:10px;
 }
 
+.int{
+  font-size:20px;
+  
+}
+
+
 /* ===== メモ風デザイン ===== */
 .note-list {
   margin: 20px auto;
