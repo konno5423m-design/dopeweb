@@ -57,7 +57,7 @@ img {
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 40%, 25% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 30%, 25% 100%, 0 100%, 0 0);
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
   background-size: cover;
@@ -81,10 +81,9 @@ padding-left: 50px;
 }
 
 .comment {
-  text-align: center;
   font-size: 14px;
   color: #2a2a2a;
-   padding-top:  10px;
+   padding-top:  30px;
    opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
     animation-delay:  0.3s;
@@ -92,17 +91,19 @@ padding-left: 50px;
 
 .introduce{
   z-index: 1;
-  font-weight: 600;
+  font-weight: 500;
 font-size: clamp(1.7rem, 5vw, 5rem) ;
   position: relative;
   text-align: right;
   padding-top: 60px;
 }
 
-.introduce2{
-  margin-right:10px;
-}
 
+.introduce3{
+  margin-left: 40%;
+font-size: 0.9rem;
+text-align: center;
+}
 /* ===== メモ風デザイン ===== */
 .note-list {
   margin: 20px auto;
