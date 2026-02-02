@@ -19,7 +19,7 @@
 .hero{
   position: relative;
   padding-bottom: 100px;
-  min-height: 90vh;
+  max-height: 100vh;
 }
 
 .hero::before {
@@ -27,7 +27,7 @@
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 10%, 35% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
 
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
@@ -36,37 +36,51 @@
 
 }
 
-.introduce{
-margin-top: -40px;
-margin-right: 50px;
-}
-h1{
-  font-size: 1.5rem;
-  font-weight: 800;
+.hero h2{
+  inset: 0;
+
 }
 
-.introduce2{
-  margin-right: 60px;
-}
+
 
 .container {
+  transform: translateX(80px);
     position: relative;
     gap: 1rem;
   width: 100%;
     z-index: 0;
+}
+.hero-content {
+      transform: translateY(70px) ;
+
+  
 }
 
 
 
 
 .comment  {
-  margin-right: 800px;
-  font-size: 18px;
+
+padding-left: 30px;
+  font-size: 15px;
   color: #3d3d3d;
    opacity: 0;
-  animation:
-   fadeIn 1s ease-out forwards,
 }
+
+.introduce {
+    transform: translateX(110px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .introduce3{
+  font-size: 20px;
+margin-left: 150px;
+  }
+
+
+
 
 
 .note-list {
