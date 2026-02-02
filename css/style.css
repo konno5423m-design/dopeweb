@@ -41,7 +41,7 @@ img {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-      min-height: 95vh;
+      min-height: 90vh;
     justify-content: center;
         background: none;
   overflow: visible;
@@ -57,7 +57,7 @@ img {
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 30%, 25% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 30%, 0% 100%, 0 100%, 0 0);
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
   background-size: cover;
@@ -81,9 +81,10 @@ padding-left: 50px;
 }
 
 .comment {
-  font-size: 14px;
+  font-size: 15px;
   color: #2a2a2a;
-   padding-top:  30px;
+   padding-top:  50px;
+   padding-left: 30px;
    opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
     animation-delay:  0.3s;
