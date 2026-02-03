@@ -1,7 +1,32 @@
+@media screen and (max-width:768px) {
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+      background-attachment: fixed;
 
+  background-image: url(../images/back/kiiro.jpg);
+  background-size:cover;
+  background-position:inherit;
+  opacity: 0.5;
+  z-index: -1;
+}
 
-@media screen and (min-width:768px) and ( max-width:1024px) {
+.menu image{
+    opacity: 0.15; /* ← ここ調整 */
+}
+
+}
+
+@media screen and (min-width:768px) {
     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+.container {
+  transform: translateX(90px);
+    position: relative;
+    gap: 1rem;
+  width: 100%;
+    z-index: 0;
+}
 
       .make-cards {
      display: grid;
@@ -27,7 +52,7 @@
   position: absolute;
   inset: 0;
   background-image: inherit;
-  clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 10%, 30% 100%, 0 100%, 0 0);
 
   z-index: 0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
