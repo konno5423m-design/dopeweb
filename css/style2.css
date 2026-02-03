@@ -84,7 +84,10 @@
     padding: 10px;
 }
 
-
+.table td:last-child,
+.table td:nth-child(2) {
+  line-height: 1.6;
+}
 
 
 

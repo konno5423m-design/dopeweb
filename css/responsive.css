@@ -7,7 +7,7 @@
 
   background-image: url(../images/back/kiiro.jpg);
   background-size:cover;
-  background-position:inherit;
+  background-position:5rem;
   opacity: 0.5;
   z-index: -1;
 }
@@ -19,7 +19,6 @@
 }
 
 @media screen and (min-width:768px) {
-    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
 .container {
   transform: translateX(90px);
     position: relative;
