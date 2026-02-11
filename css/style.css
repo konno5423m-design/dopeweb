@@ -120,9 +120,7 @@ font-size: clamp(1.7rem, 5vw, 5rem) ;
 text-align: center;
   animation: fadeIn 0.5s ease-out forwards;
         opacity: 0;
-
   animation-delay: 0.5s;
-
 font-size: 1rem;
 }
 /* ===== メモ風デザイン ===== */
@@ -138,7 +136,32 @@ font-size: 1rem;
     yura 4s ease-in-out infinite;
 animation-delay:2.4s;
 }
-  
+
+.notes h2{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 50px;
+    margin-top: 60px;
+  }
+ .notes h2::before,
+ .notes h2::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: black;
+}
+
+ .notes h2::before{
+  left:0;
+}
+ .notes h2::after{
+  right: 0;
+}
 .note {
   width: 180px;
   padding: 20px;
@@ -250,14 +273,19 @@ h3:after {
 }
 
 .catchphrase{
+  margin-top: 20px;
     height: auto;
-  min-height: 90vh;
   background-color: #ffffff;
   z-index: 10;
   text-align: center;
-  padding: 60px 0px;
 }
-.catchphrase h2{
+
+.catchphrase p{
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+#top-catch{
   font-size: 1.2rem;
   display: inline;
   padding-bottom: 7px;
@@ -271,16 +299,80 @@ h3:after {
 }
 
 
-
-.catchphrase p{
-  margin-top: 10px;
-  font-size: 0.8rem;
-}
-.tobe{
-   padding: 30px 20px;
+.make {
+  padding: 20px;
   text-align: center;
+margin: 30px auto;
 
 }
+
+.make h2{
+    text-align: left;
+  color: #3c3c3c;
+  font-size: 1.7rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+}
+.make h2::before{
+    white-space: nowrap;
+    position: absolute;
+    top: -50px;
+    left:-30px;
+    color: #faf29b;
+    font-size: 3rem;
+    text-transform: uppercase;
+    content: 'コンセプト';
+    z-index: -1;
+}
+
+.make-lead {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.make-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* スマホ1列 */
+  gap: 20px;
+}
+
+.make-card {
+  background: rgba(255,255,255,0.8);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.make-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.make-card h4:first-letter {
+  font-size: 2em;
+  color: #7172ac;
+}
+.make-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.make-card:nth-child(odd) {
+  transform: rotate(-0.5deg);
+}
+.make-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+
 .do{
   background-image: url(../images/back/shell.jpg);
   background-position: left;
@@ -511,77 +603,5 @@ display: inline;
   justify-content: center;
   text-align: center;
   margin-bottom: 60px;
-}
-
-.make {
-  padding: 80px 20px;
-  text-align: center;
-
-
-}
-.make h2{
-    text-align: left;
-  color: #3c3c3c;
-  font-size: 1.7rem;
-  margin: 40px;
-  font-weight: 500;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 600;
-}
-.make h2::before{
-    white-space: nowrap;
-    position: absolute;
-    top: -50px;
-    left:-30px;
-    color: #faf29b;
-    font-size: 3rem;
-    text-transform: uppercase;
-    content: 'コンセプト';
-    z-index: -1;
-}
-
-.make-lead {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-.make-cards {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr; /* スマホ1列 */
-  gap: 20px;
-}
-
-.make-card {
-  background: rgba(255,255,255,0.8);
-  border-radius: 16px;
-  padding: 28px 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.make-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-}
-.make-card h4:first-letter {
-  font-size: 2em;
-  color: #7172ac;
-}
-.make-card p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.make-card:nth-child(odd) {
-  transform: rotate(-0.5deg);
-}
-.make-card:nth-child(even) {
-  transform: rotate(0.5deg);
 }
 

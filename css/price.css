@@ -1,0 +1,54 @@
+.hero2{
+    margin-top: -90px;
+    width: 100vw;
+    height: 200px;
+    background-image:url(../images/back/kiiro.jpg);
+    background-size: cover;
+}
+.price-contener{
+    padding: 50px 10px;
+}
+
+
+
+
+
+
+
+.accordion-fix-plan details {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.accordion-fix-plan summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-fix-plan summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ＋マーク */
+.accordion-fix-plan .icon::before {
+  content: "＋";
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+/* 開いたら−に */
+.accordion-fix-plan details[open] .icon::before {
+  content: "−";
+}
+
+.accordion-fix-plan ul {
+  padding: 0 16px 14px 32px;
+  margin: 0;
+}
