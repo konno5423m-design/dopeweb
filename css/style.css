@@ -95,6 +95,7 @@ padding-left: 50px;
 }
 
 .comment {
+  text-align: center;
   font-size: 12px;
   color: #2a2a2a;
    padding-top:  10px;
@@ -273,6 +274,8 @@ h3:after {
 }
 
 .catchphrase{
+    padding-top: 50px;
+
   margin-top: 20px;
     height: auto;
   background-color: #ffffff;
