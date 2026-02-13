@@ -65,16 +65,25 @@ img {
   position: relative;
   z-index: 1;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: inherit;
-  clip-path: polygon(100% 0, 100% 30%, 0% 100%, 0 100%, 0 0);
-  z-index: 0;
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
   background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
   background-size: cover;
   background-position: center;
+  clip-path: polygon(100% 0, 100% 50%, 0% 85%, 0 100%, 0 0);
+  z-index: 0;
+}
+
+/* うっすら黒フィルター */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35); /* 0.3〜0.45で調整 */
+  clip-path: polygon(100% 0, 100% 50%, 0% 85%, 0 100%, 0 0); /* 同じ形にする */
+  z-index: 1;
 }
 .container {
     position: relative;
@@ -104,10 +113,14 @@ padding-left: 50px;
   animation: fadeIn 0.5s ease-out forwards; 
 
 }
-
+.accent {
+  color: #ffb347; /* くすみオレンジ */
+  font-weight: 700;
+}
 .introduce{
   z-index: 1;
   position: relative;
+  margin-top: 150px;
   padding-top: 60px;
   text-align: center;
 }
