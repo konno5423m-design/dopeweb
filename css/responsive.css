@@ -25,8 +25,7 @@
   }
 
 .introduce {
-    transform: translateX(80px);
-
+text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -85,17 +84,15 @@
 }
 .introduce {
       transform: translateY(30px);
-
-    transform: translateX(200px);
-
     display: flex;
     flex-direction: column;
   }
 
 
   .introduce3{
-  font-size: 20px;
 margin-left: 150px;
+text-align: center;
+
   }
 
 

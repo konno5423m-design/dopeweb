@@ -21,13 +21,9 @@ body {
 }
 
 h1{
-  font-size: 35px;
-    transform: translatex(100px);
-    animation-delay:  0.3s;
-  font-size: clamp(2rem, 5vw, 4rem) ;
-  line-height: clamp(2.4rem, 5vw, 5.5rem) ;
-
-text-align: center;
+  line-height: clamp(2.4rem, 6vw, 6.5rem) ;
+  font-size: clamp(1.5rem, 5vw, 5rem);
+text-align: right;
 
 }
 
@@ -111,25 +107,47 @@ padding-left: 50px;
 
 .introduce{
   z-index: 1;
-  font-weight: 500;
-font-size: clamp(1.7rem, 5vw, 5rem) ;
   position: relative;
   padding-top: 60px;
-  transform: translateY(50px);
-}
-.introduce2 {
-  font-size: clamp(1.7rem, 5vw, 5rem);
 }
 
 .introduce3 {
-  font-size: 1rem;
+  font-size:clamp(0.8rem, 4vw, 2rem) ;
   margin-top: 0.5rem;
-text-align: center;
+text-align: right;
   animation: fadeIn 0.5s ease-out forwards;
         opacity: 0;
   animation-delay: 0.5s;
-font-size: 1rem;
 }
+.catchphrase{
+    padding-top: 50px;
+
+    height: auto;
+  text-align: center;
+}
+
+.catchphrase h2{
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+#top-catch{
+  font-size: 1.2rem;
+  display: inline;
+  padding-bottom: 7px;
+    background-image: linear-gradient(90deg, #b2d5de 0 20%, #dedede 20%);
+    background-repeat: no-repeat;
+    background-size: 100% 10%;
+    background-position: bottom;
+    color: #323232;
+    font-weight: bold;
+}
+
+
+
+
 /* ===== メモ風デザイン ===== */
 .note-list {
   margin: 20px auto;
@@ -279,33 +297,6 @@ line-height: 1.5;
     content: "";
 }
 
-.catchphrase{
-    padding-top: 50px;
-
-  margin-top: 20px;
-    height: auto;
-  background-color: #ffffff;
-  z-index: 10;
-  text-align: center;
-}
-
-.catchphrase p{
-  font-size: 16px;
-  color: #555555;
-  margin-bottom: 10px;
-}
-#top-catch{
-  font-size: 1.2rem;
-  display: inline;
-  padding-bottom: 7px;
-    margin-bottom: 0.2rem;
-    background-image: linear-gradient(90deg, #b2d5de 0 20%, #dedede 20%);
-    background-repeat: no-repeat;
-    background-size: 100% 10%;
-    background-position: bottom;
-    color: #323232;
-    font-weight: bold;
-}
 
 
 .make {
