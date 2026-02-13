@@ -133,18 +133,22 @@ padding-left: 50px;
   animation-delay: 0.5s;
 }
 .catchphrase{
-    padding-top: 50px;
-
+margin: 0 auto;
     height: auto;
   text-align: center;
+}
+
+.catchphrase-container{
+  margin:0 0 60px 0;
 }
 
 .catchphrase h2{
   font-size: 16px;
   color: #555555;
   margin-bottom: 10px;
-  margin-bottom: 50px;
 }
+
+
 
 #top-catch{
   font-size: 1.2rem;
@@ -256,20 +260,7 @@ opacity:50%;
   text-align: center;
 }
 
-.dope{
-  text-align: center;
-list-style: none;
-display: flex;
 
-}
-
-
-
-.dope li{
-margin: 20px;
-
-
-}
 
 
 .do h3{
@@ -337,7 +328,7 @@ margin: 30px auto;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: 'コンセプト';
+    content: 'KANGAE';
     z-index: -1;
 }
 
@@ -458,11 +449,25 @@ margin: 30px auto;
   background: #f8f6f2;
 }
 
-.section-title {
-  text-align: center;
+
+.works-title {
   font-size: 32px;
   margin-bottom: 60px;
+  position: relative;
 }
+
+.works-title::before{
+    white-space: nowrap;
+    position: absolute;
+    top: -50px;
+    left:-30px;
+    color: #faf29b;
+    font-size: 3rem;
+    text-transform: uppercase;
+    content: 'KATUDOU';
+    z-index: -1;
+}
+
 
 .works-card {
   display: flex;
@@ -479,7 +484,28 @@ margin: 30px auto;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
+.works-image-wrap {
+  position: relative;
+  display: inline-block;
+}
 
+.pc-shot img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.sp-shot {
+  position: absolute;
+  right: -30px;
+  bottom: -20px;
+}
+
+.sp-shot img {
+  width: 150px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
 .works-text {
   flex: 1;
   min-width: 280px;
@@ -560,7 +586,7 @@ margin: 30px auto;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: 'DEKIRUKOTO';
+    content: 'ryoukin';
     z-index: 5;
 }
 
@@ -588,7 +614,7 @@ padding: 10px;
 }
 
 .menu image{
-    opacity: 0.15; /* ← ここ調整 */
+    opacity: 0.15; 
 }
 
 .menu i {

@@ -43,7 +43,7 @@
   transition: transform 0.2s ease;
 }
 
-/* 開いたら−に */
+
 .accordion-fix-plan details[open] .icon::before {
   content: "−";
 }
