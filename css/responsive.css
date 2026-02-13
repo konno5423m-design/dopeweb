@@ -90,9 +90,8 @@ padding-left: 30px;
   color: #3d3d3d;
    opacity: 0;
 }
-
 .introduce {
-    transform: translateX(110px);
+    transform: translateX(300px);
     display: flex;
     flex-direction: column;
   }

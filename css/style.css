@@ -240,7 +240,7 @@ margin: 20px;
 }
 
 
-h3 {
+.do h3{
     font-size: 1.3rem;
   font-weight: 800;
 line-height: 1.5;
@@ -256,7 +256,7 @@ line-height: 1.5;
 }
 
 
-h3:before {
+.do h3:before {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -267,7 +267,7 @@ h3:before {
     content: "";
 }
 
-h3:after {
+.do h3:after {
     position: absolute;
     top: 95%;
     left: 50%;
@@ -449,40 +449,65 @@ margin: 30px auto;
 }
 
 .works {
-  padding: 80px 20px;
+  padding: 100px 20px;
+  background: #f8f6f2;
+}
+
+.section-title {
   text-align: center;
-  background: #f9f7f4;
+  font-size: 32px;
+  margin-bottom: 60px;
 }
 
 .works-card {
-  max-width: 900px;
-  margin: 40px auto 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   align-items: center;
-  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 20px auto 50px;
 }
 
-.works-image {
-  width: 400px;
+.works-image-wrap img {
+  width: 520px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-.works-content {
-  max-width: 400px;
-  text-align: left;
+.works-text {
+  flex: 1;
+  min-width: 280px;
 }
 
-.works-button {
+.works-category {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.works-name {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.works-description {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.works-btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #333;
+  padding: 12px 26px;
+  background: #222;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.works-btn:hover {
+  background: #444;
 }
 
 .tobe h2{

@@ -89,7 +89,20 @@
   line-height: 1.6;
 }
 
+.comparison-lead{
+  margin: 0 0 16px;
+  font-size: 0.95em;
+  opacity: 0.9;
+}
 
+.comparison-table .is-service{
+  font-weight: 600;
+}
+
+.comparison-table th.is-service{
+    border-bottom: 5px solid #EF8633;
+
+}
 
 .about{
     margin: 0;
