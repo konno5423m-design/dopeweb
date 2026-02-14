@@ -48,7 +48,7 @@
   text-decoration: none;
   transition: color .2s;
 }
-.header__siteTitle a:hover{ color: skyblue; }
+.header__siteTitle a:hover{ color: rgb(87, 248, 181); }
 
 /* nav 共通 */
 .header__nav{ display: flex; align-items: center; }
@@ -70,10 +70,10 @@
   height: 5px;
   margin: auto;
   content: "";
-  background: skyblue;
+  background:  rgb(76, 228, 180);
   transition: width .2s;
 }
-.header__navLink:hover{ color: skyblue; }
+.header__navLink:hover{ color: rgb(76, 228, 180); }
 .header__navLink:hover::after{ width: 100%; }
 
 
