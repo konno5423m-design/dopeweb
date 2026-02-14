@@ -1,36 +1,35 @@
-
 /* =====================
- header
+   HEADER（共通）
 ===================== */
-.header {
+.header{
   position: fixed;
-  padding: 5px 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: #fff;
+  padding: 5px 0;
+  background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
   transition: background-color .3s, box-shadow .3s;
   z-index: 1000;
 }
+
 #icon{
-  margin-right:5px;
+  margin-right: 5px;
   width: 65px;
   height: auto;
 }
 
-
-.header.is-transparent {
-  background-color: transparent;
+.header.is-transparent{
+  background: transparent;
   box-shadow: none;
   color: #fff;
 }
 
 /* inner */
-.header__inner {
+.header__inner{
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   width: 1240px;
   max-width: calc(100vw - 30px);
@@ -40,17 +39,8 @@
 }
 
 /* site title */
-.header__siteTitle {
-  font-size: 25px;
-}
-
-
-.header__navButton {
-display: npone;
-}
-
-
-.header__siteTitle a {
+.header__siteTitle{ font-size: 25px; }
+.header__siteTitle a{
   display: flex;
   align-items: center;
   height: 80px;
@@ -58,36 +48,13 @@ display: npone;
   text-decoration: none;
   transition: color .2s;
 }
+.header__siteTitle a:hover{ color: skyblue; }
 
-.header__siteTitle a:hover {
-  color: skyblue;
-}
+/* nav 共通 */
+.header__nav{ display: flex; align-items: center; }
+.header__navListItem{ list-style: none; }
 
-.header__navListItem {
-list-style: none;
-}
-
-
-/* =====================
- nav (PC)
-===================== */
-.header__nav {
-  display: flex;
-  align-items: center;
-}
-
-
-.header__navList {
-margin-right: 50px;
-  display: flex;
-  height: 100%;
-}
-
-.header__navListItem:not(:last-child) {
-  margin-right: 40px;
-}
-
-.header__navLink {
+.header__navLink{
   position: relative;
   display: flex;
   align-items: center;
@@ -96,168 +63,139 @@ margin-right: 50px;
   text-decoration: none;
   transition: color .2s;
 }
-
-.header__navLink::after {
+.header__navLink::after{
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  left: 0; right: 0; bottom: 0;
   width: 0;
   height: 5px;
   margin: auto;
   content: "";
-  background-color: skyblue;
+  background: skyblue;
   transition: width .2s;
 }
+.header__navLink:hover{ color: skyblue; }
+.header__navLink:hover::after{ width: 100%; }
 
-.header__navLink:hover {
-  color: skyblue;
+
+/* =====================
+   PC（870px以上）
+===================== */
+@media (min-width: 870px){
+  .header__navButton{ display: none; }
+
+  .header__navList{
+    margin: 0 50px 0 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+  }
+
+  .header__navListItem:not(:last-child){
+    margin-right: 40px;
+  }
+
+  .header__navListItem{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
-.header__navLink:hover::after {
-  width: 100%;
-}
 
+/* =====================
+   SP（870px未満）
+===================== */
+@media (max-width: 870px){
+  .header__siteTitle{ font-size: 24px; }
 
-
-@media (max-width: 890px) {
-
-  .header__navList {
-    text-align: right;
-    display: flex; /* ←これはOK */
-    flex-direction: column;
+  /* 暗幕（headerに .menu-open を付ける） */
+  .header::after{
+    content:"";
     position: fixed;
-    top: 90px;
-    right:1px;
+    inset: 0;
+    background: rgba(0,0,0,.45);
     opacity: 0;
     visibility: hidden;
-    color: #ffffff;
-   height:250px;
-   width: 180px;
-   margin: 0;
+    transition: opacity .25s ease, visibility .25s ease;
+    z-index: 900;
   }
-
-  .header__navList.is-open {
-      transform: translateY(0);
+  .header.menu-open::after{
     opacity: 1;
     visibility: visible;
-    background-color: rgb(75, 114, 155);
-    height: fit-content;
+  }
+
+  /* ハンバーガーボタン */
+  .header__navButton{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .header__navButtonLineTop,
+  .header__navButtonLineMiddle,
+  .header__navButtonLineBottom{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    transition: transform .3s ease, opacity .3s ease;
+  }
+  .header__navButtonLineTop{ transform: translateY(-10px); }
+  .header__navButtonLineBottom{ transform: translateY(10px); }
+
+  .header__navButton.is-active .header__navButtonLineTop{ transform: rotate(45deg); }
+  .header__navButton.is-active .header__navButtonLineMiddle{ opacity: 0; }
+  .header__navButton.is-active .header__navButtonLineBottom{ transform: rotate(-45deg); }
+
+  /* メニュー本体（右からスライド） */
+  .header__navList{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    height: calc(100dvh - 80px);
     margin: 0;
-  height: 90%;
-  }
-      
+    padding: 22px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
+    background: rgb(75, 114, 155);
+    color: #fff;
 
-
-.header__navButton {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: #000;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.header__navButtonLineTop,
-.header__navButtonLineMiddle,
-.header__navButtonLineBottom {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 26px;
-  height: 2px;
-  background-color: #fff;
-  transition: transform .3s, opacity .3s;
-}
-
-.header__navButtonLineTop {
-  transform: translateY(-10px);
-}
-
-.header__navButtonLineBottom {
-  transform: translateY(10px);
-}
-.header__navList.is-open {
-   opacity: 1; visibility: visible; transform: translateY(0); } 
-.header__navListItem { margin: 20px 0; text-align: center;
-margin: 10px 10px; 
-    font-size: 14px;
-
-} 
- .header__navButton.is-active .header__navButtonLineTop {
-   transform: rotate(45deg);
-   } 
- .header__navButton.is-active .header__navButtonLineMiddle {
-   opacity: 0; }
-  .header__navButton.is-active .header__navButtonLineBottom {
-    transform: rotate(-45deg); 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(110%);
+    transition: transform .35s ease, opacity .25s ease, visibility .25s ease;
+    z-index: 1001;
   }
 
-  .header__siteTitle {
-    font-size: 24px;
-  }
-
-
-}
-@media (min-width: 890px) {
-  .header__navList,
-  .header__navList.is-active {
-    position: static;
-    transform: none;
+  .header__navList.is-open{
     opacity: 1;
     visibility: visible;
-   margin:0;
-   padding-left: 0;
+    transform: translateX(0);
   }
 
-  .header__navButton {
-    display: none;
+  .header__navListItem{
+    margin: 10px 0;
+    font-size: 16px;
   }
 
-
-/* メニューエリア */
-.hamburger-demo-menuwrap{
-	position: fixed;
-	height: 100%;
-	background: #fafafa; /* メニューエリアの背景色 */
-	padding: 5em 3% 2em;
-	z-index: 9998;
-	transition: .3s;
-	overflow-y: scroll; /* メニュー内容が多い場合に縦スクロールする */
-	top: 0;
-	left: 100%;
-	width: 70%;
-}
-/* メニューリスト */
-.hamburger-demo-menulist{
-	margin-right: 3%;
-	padding-left: 5% !important; /* !important不要な場合もあり */
-	list-style: none;
-}
-.hamburger-demo-menulist li a{
-	text-decoration: none;
-	color: #333; /* メニューリストの文字色 */
-	display: block;
-	padding: .5em 0;
-}
-/* メニューエリア･アニメーション */
-	/* 右から */
-#hamburger-demo1:checked ~ .hamburger-demo-menuwrap{
-	left: 30%;
-}
-	/* コンテンツカバー */
-#hamburger-demo1:checked ~ .hamburger-demo-cover{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 9997;
-	background: rgba(3,3,3,.5);
-	display: block;
-
-}
+  .header__navLink{
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+  .header__navLink:hover{
+    background: rgba(255,255,255,.12);
+  }
 }
