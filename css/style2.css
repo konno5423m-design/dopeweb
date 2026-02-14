@@ -189,16 +189,10 @@ text-align: center;
     margin: 2rem;
     width: 180px;
     height: 180px;
-    border-radius: 50%;
-    object-fit:contain ;
+    object-fit:cover;
 }
 
 
-.card:hover {
-    box-shadow: 0 8px 32px 0 #353535;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-}
 
 .card-box {
     padding: 1rem;
@@ -251,3 +245,140 @@ text-align: center;
   background-color: #222222; /* ホバー時の背景色 */
   color: white !important; /* ホバー時のテキスト色 */
 }
+
+.price-title h2{
+    text-align: left;
+  color: #3c3c3c;
+  font-size: 1.7rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+}
+.price-title h2::before{
+    white-space: nowrap;
+    position: absolute;
+    top: -50px;
+    left:-30px;
+    color: #faf29b;
+    font-size: 3rem;
+    text-transform: uppercase;
+    content: 'ryoukin';
+    z-index: 5;
+}
+
+
+
+
+.menu{
+margin: 0;
+padding: 10px;
+	background-repeat: no-repeat;
+  background-position: center;
+	position: relative;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+      background-attachment: fixed;
+
+  background-image: url(../images/back/kiiro.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.menu image{
+    opacity: 0.15; 
+}
+
+.menu i {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #7172ac; 
+}
+.menu a{
+text-decoration: none;
+
+}
+
+.l-wrapper_06 {
+padding: 50px;
+  margin: 20px auto;
+  width:90vw;
+  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  gap: 10px 20px;
+  justify-content: center;
+}
+
+
+.card_06 {
+  
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+.card-img_06 {
+  border-radius: 5px 5px 0 0;
+  max-width: 50%;
+  height: 50px;
+}
+.card-content_06 {
+  padding: 8px 20px 20px;
+}
+.card-title_06 {
+  font-size: 1.6em;
+  color: #333;
+  font-weight: 700;
+}
+.card-text_06 {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0.2em;
+}
+
+.card-link_06 a {
+  text-decoration: none;
+  color: #4f96f6;
+  margin: 0 10px;
+}
+.card-link_06 a:hover {
+  color: #6bb6ff;
+}
+
+.card-content_06 p {
+  margin-bottom:0;
+}
+
+.click {
+  margin-top: 10px;
+margin-left :80%;
+border-bottom: 3px solid #959595;
+    padding: 0px;
+display: inline;
+
+}
+
+.card-content_06:hover{
+   
+    box-shadow: 0 8px 32px 0 #353535;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+}
+
+.container6{
+  display: flex;
+  ;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+

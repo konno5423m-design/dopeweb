@@ -4,6 +4,7 @@
 ===================== */
 .header {
   position: fixed;
+  padding: 5px 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,6 +14,12 @@
   transition: background-color .3s, box-shadow .3s;
   z-index: 1000;
 }
+#icon{
+  margin-right:5px;
+  width: 65px;
+  height: auto;
+}
+
 
 .header.is-transparent {
   background-color: transparent;
@@ -29,11 +36,12 @@
   max-width: calc(100vw - 30px);
   height: 100%;
   margin: 0 auto;
+  font-size: 16px;
 }
 
 /* site title */
 .header__siteTitle {
-  font-size: 32px;
+  font-size: 25px;
 }
 
 
@@ -112,7 +120,7 @@ margin-right: 50px;
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 890px) {
 
   .header__navList {
     text-align: right;
@@ -194,19 +202,21 @@ margin: 10px 10px;
 
 
 }
-@media (min-width: 901px) {
+@media (min-width: 890px) {
   .header__navList,
   .header__navList.is-active {
     position: static;
     transform: none;
     opacity: 1;
     visibility: visible;
+   margin:0;
+   padding-left: 0;
   }
 
   .header__navButton {
     display: none;
   }
-}
+
 
 /* メニューエリア */
 .hamburger-demo-menuwrap{
@@ -249,4 +259,5 @@ margin: 10px 10px;
 	background: rgba(3,3,3,.5);
 	display: block;
 
+}
 }

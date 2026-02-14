@@ -43,11 +43,6 @@ img {
 
 
 /* ===== ファーストビュー ===== */
-#icon{
-  width: 80px;
-  height: auto;
-}
-
 .hero {
   margin-top: -90px;
   padding-top: 0;
@@ -90,6 +85,7 @@ img {
     gap: 1rem;
   width: 100%;
     z-index: 0;
+    margin-top: 20px;
 padding-top: 70px;
 padding-left: 50px;
 }
@@ -126,8 +122,9 @@ padding-left: 50px;
 }
 
 .introduce3 {
-  font-size:clamp(1rem, 4vw, 2rem) ;
-  margin-top: 0.5rem;
+  font-size:clamp(1rem, 4vw, 1.5rem) ;
+  margin: 0.5rem 0;
+padding: 0;
   animation: fadeIn 0.5s ease-out forwards;
         opacity: 0;
   animation-delay: 0.5s;
@@ -148,7 +145,13 @@ margin: 0 auto;
   margin-bottom: 10px;
 }
 
-
+.dope-container{
+  display: inline-block;
+  padding: 1.2rem;
+  border-radius:12px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
 #top-catch{
   font-size: 1.2rem;
@@ -404,12 +407,18 @@ line-height: 1.5;
 
 }
 
-  .contener9{
+  .conteiner9-content {
+    background: rgba(255,255,255,0.8);
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 480px;
+    width: 100%;
   flex: 1 1 420px;
   max-width: 480px;
   margin: 0;
 
-  padding: 10px;
     justify-content: center;
     word-wrap: break-word;
     border: 2px solid rgba(255, 255, 255, .3);
@@ -420,6 +429,36 @@ line-height: 1.5;
     -webkit-backdrop-filter: blur(13px);
     transition: .5s;
 }
+
+.conteiner9 h4{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction : column;
+ margin-bottom: 2em;
+}
+
+.conteiner9 h4::before{
+ content: '';
+ position: absolute;
+ display: inline-block;
+ width: 1px;
+ height: 20px;
+ bottom: -30px;
+ left: 50%;
+ -webkit-transform: translateX(-50%);
+ transform: translateX(-50%);
+ background-color:currentColor !important;
+ top:unset;
+ border: unset;
+ margin-left: unset;
+ margin-right:unset;
+}
+.conteiner9-content:hover {
+    box-shadow: 0 8px 5px 0 #646464;
+}
+
 .do h2{
     text-align: left;
   color: #3c3c3c;
@@ -460,13 +499,17 @@ line-height: 1.5;
   margin: 0 auto;
 }
 
-.works-title {
-  font-size: 32px;
-  margin-bottom: 60px;
+.works h2{
+    text-align: left;
+  color: #3c3c3c;
+  font-size: 1.7rem;
+  margin: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
   position: relative;
+  font-weight: 600;
 }
-
-.works-title::before{
+.works h2::before{
     white-space: nowrap;
     position: absolute;
     top: -50px;
@@ -474,7 +517,7 @@ line-height: 1.5;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: 'KATUDOU';
+    content: 'DEKIRUKOTO';
     z-index: -1;
 }
 
@@ -549,168 +592,5 @@ line-height: 1.5;
 
 .works-btn:hover {
   background: #444;
-}
-
-.tobe h2{
-  
- position: relative;
-    font-size: 1.2rem;
-    font-weight: bold;
-
-}
-
-
-.tobe ul{
-  margin: auto;
-    text-align: center;
-      list-style: none;
-        display: inline-block;
-        gap:2rem;
-}
-
-.tobe li{
-  text-align: left;
-  margin: 10px;
-
-}
-.tobe-item{
-
-  background: linear-gradient(transparent 65%, rgba(255, 211, 139, 0.6) 65%);
-}
-
-.price-title h2{
-    text-align: left;
-  color: #3c3c3c;
-  font-size: 1.7rem;
-  margin: 40px;
-  font-weight: 500;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 600;
-}
-.price-title h2::before{
-    white-space: nowrap;
-    position: absolute;
-    top: -50px;
-    left:-30px;
-    color: #faf29b;
-    font-size: 3rem;
-    text-transform: uppercase;
-    content: 'ryoukin';
-    z-index: 5;
-}
-
-
-
-
-.menu{
-margin: 0;
-padding: 10px;
-	background-repeat: no-repeat;
-  background-position: center;
-	position: relative;
-}
-.menu::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-      background-attachment: fixed;
-
-  background-image: url(../images/back/kiiro.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-.menu image{
-    opacity: 0.15; 
-}
-
-.menu i {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  color: #7172ac; 
-}
-.menu a{
-text-decoration: none;
-
-}
-
-.l-wrapper_06 {
-padding: 50px;
-  margin: 20px auto;
-  width:90vw;
-  gap:20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 320px);
-  gap: 10px 20px;
-  justify-content: center;
-}
-
-
-.card_06 {
-  
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
-}
-
-.card-img_06 {
-  border-radius: 5px 5px 0 0;
-  max-width: 50%;
-  height: 50px;
-}
-.card-content_06 {
-  padding: 8px 20px 20px;
-}
-.card-title_06 {
-  font-size: 1.6em;
-  color: #333;
-  font-weight: 700;
-}
-.card-text_06 {
-  color: #777;
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 0.2em;
-}
-
-.card-link_06 a {
-  text-decoration: none;
-  color: #4f96f6;
-  margin: 0 10px;
-}
-.card-link_06 a:hover {
-  color: #6bb6ff;
-}
-
-.card-content_06 p {
-  margin-bottom:0;
-}
-
-.click {
-  margin-top: 10px;
-margin-left :80%;
-border-bottom: 3px solid #959595;
-    padding: 0px;
-display: inline;
-
-}
-
-.card-content_06:hover{
-   
-    box-shadow: 0 8px 32px 0 #353535;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-}
-
-.container6{
-  display: flex;
-  ;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 60px;
 }
 
