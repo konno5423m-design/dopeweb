@@ -356,7 +356,6 @@ margin: 30px auto;
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
-    padding: 1.7rem;
   
 }
 .do h3{
@@ -414,11 +413,10 @@ line-height: 1.5;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 480px;
-    width: 100%;
+    width: 90%;
   flex: 1 1 420px;
   max-width: 480px;
-  margin: 0;
-
+  margin: auto;
     justify-content: center;
     word-wrap: break-word;
     border: 2px solid rgba(255, 255, 255, .3);
@@ -431,7 +429,7 @@ line-height: 1.5;
 }
 
 .conteiner9 h4{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
  position: relative;
  display: flex;
  justify-content: center;
@@ -487,7 +485,7 @@ line-height: 1.5;
 }
 
 .do ul{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .result{
@@ -505,7 +503,7 @@ line-height: 1.5;
   margin: 0 auto;
 }
 
-.works h2{
+.works-title{
     text-align: left;
   color: #3c3c3c;
   font-size: 1.7rem;
@@ -514,8 +512,9 @@ line-height: 1.5;
   text-transform: uppercase;
   position: relative;
   font-weight: 600;
+      z-index: 2;
 }
-.works h2::before{
+.works-title::before{
     white-space: nowrap;
     position: absolute;
     top: -50px;
@@ -523,7 +522,7 @@ line-height: 1.5;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: 'DEKIRUKOTO';
+    content: 'seisaku';
     z-index: -1;
 }
 
@@ -534,7 +533,7 @@ line-height: 1.5;
   align-items: center;
   gap: 50px;
   max-width: 1100px;
-  margin: 20px auto 50px;
+  margin: 20px auto 80px;
 }
 .works-image-wrap {
   position: relative;
