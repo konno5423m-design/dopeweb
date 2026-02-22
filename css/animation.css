@@ -50,5 +50,13 @@
     }
 }
 
+@keyframes float{
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50%     { transform: translateY(-10px) rotate(-6deg); }
+}
 
-
+@keyframes flyAway{
+  0%   { transform: translateY(0) rotate(0deg); opacity:1; }
+  40%  { transform: translate(40px,-30px) rotate(-10deg); opacity:1; }
+  100% { transform: translate(160px,-100px) rotate(-25deg); opacity:0; }
+}

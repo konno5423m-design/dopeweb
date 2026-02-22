@@ -1,3 +1,5 @@
+
+
 .catchphrase2 {
   text-align: center;
   padding: 100px 20px 40px;
@@ -15,32 +17,46 @@
   line-height: 1.8;
 }
 
-/* =====================
-  contactエリア
-===================== */
 
-.contact {
+.contact{
+  padding: 120px 20px;
   text-align: center;
-  padding: 40px 20px 100px;
-  background-color: #f8f8f8;
 }
 
-.contact .btn {
-  margin-bottom: 20px;
+.plane-wrap{
+  position:relative;
+  margin-bottom:30px;
+    margin-bottom: 30px;
+
 }
 
-.contact-button {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+.plane{
+  width: 42px;
+  height: auto;
+  animation: float 2.5s ease-in-out infinite;
 }
-.contact p {
-  margin: 8px 0;
+
+.contact h2{
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+.contact-sub{
+  margin-top: 25px;
+  font-size: 0.9rem;
   color: #666;
 }
 
-.contact a {
-  color: #1e5fff;
-  text-decoration: none;
+.contact .plane{
+  animation: float 2.5s ease-in-out infinite;
 }
+
+.btn:hover ~ .plane-wrap .plane{
+    animation: flyAway .7s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+
 /* スマホ調整 */
 @media (max-width: 480px){
   .contact{
