@@ -83,23 +83,6 @@ margin-left: 150px;
   border-radius:12px;
 }
 
-  .comparison{
-    padding: 56px 14px;
-  }
-  .comparison-table th,
-  .comparison-table td{
-    padding: 14px 12px;
-    font-size: 0.9rem;
-  }
-  .comparison-table td:first-child{
-    width: 30%;
-  }
-  .comparison-table th.is-service::after{
-    display: block;
-    margin: 8px auto 0;
-    width: fit-content;
-  }
-
   
 }
 
