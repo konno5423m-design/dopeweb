@@ -208,39 +208,38 @@ animation-delay:2.4s;
   right: 0;
 }
 .note {
-  width: 180px;
+  width: 200px;
   padding: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.4;
   box-shadow:
     0 6px 12px rgba(0,0,0,0.15),
     0 2px 4px rgba(0,0,0,0.08);
   border-radius: 3px;
   transform: translateY(-10px) rotate(-2deg);
- 
 }
 #note1{
-   background: rgba(10, 45, 91, 0.55); 
+   background: rgba(58, 96, 146, 0.65); 
  color:#ffffff;
   transform: rotate(-3deg)
 
 }
 
 #note2 {
- background: rgba(51, 88, 153, 0.55); 
+ background: rgba(112, 33, 143, 0.65); 
  color:#ffffff; 
  transform:
   rotate(-1deg);
 
 }
 #note3 {
- background: rgba(64, 55, 145, 0.55); 
+ background: rgba(36, 103, 84, 0.65); 
  color:#ffffff; 
  transform: rotate(1deg); 
 }
 
 #note4 {
- background:rgba(60, 60, 98, 0.55);
+ background:rgba(146, 12, 12, 0.65);
  color:#ffffff; 
  transform: rotate(3deg); 
 }
