@@ -31,7 +31,7 @@
 @media screen and (min-width:768px) {
 .container {
     transform: none;
-    padding-left: 80px; /* ここで右に寄せる */
+    padding-left: 80px; 
   }
 
 .introduce {
@@ -65,6 +65,11 @@ text-align: center;
   box-shadow: 0 10px 18px rgba(0,0,0,0.18);
 }
 
+.problem-image{
+  max-width: 400px;
+  margin: 30px auto;
+  display: block;
+}
 
 
       .make-cards {
@@ -77,7 +82,7 @@ text-align: center;
 text-align: right;
 }
   .introduce3{
-margin-left: 150px;
+margin:auto;
   display:inline-block;
   padding:0.5em 1em;
   border-radius:12px;
@@ -188,6 +193,11 @@ margin-left: 150px;
   box-shadow: 0 10px 18px rgba(0,0,0,0.18);
 }
 
+.problem-image{
+  max-width: 400px;
+  margin: 30px auto;
+  display: block;
+}
 
 .catchphrase{
 

@@ -122,13 +122,13 @@ padding-left: 50px;
 }
 
 .introduce3 {
-  font-size:clamp(1rem, 4vw, 1.5rem) ;
+  font-size:clamp(1.2rem, 4vw, 1.7rem) ;
   margin: 0.5rem 0;
 padding: 0;
   animation: fadeIn 0.5s ease-out forwards;
         opacity: 0;
-  animation-delay: 0.5s;
 }
+
 .catchphrase{
 margin: 0 auto;
     height: auto;
@@ -299,7 +299,7 @@ margin: 30px auto;
 }
 
 .make h3{
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
@@ -308,6 +308,7 @@ margin: 30px auto;
   font-weight: 500;
   color: #555;
   margin-bottom: 40px;
+  line-height: 1.8;
 }
 
 .make-cards {
@@ -356,6 +357,7 @@ margin: 30px auto;
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
+    padding:20px;
   
 }
 .do h3{
