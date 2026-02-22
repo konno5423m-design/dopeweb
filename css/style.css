@@ -416,7 +416,7 @@ line-height: 1.5;
     width: 90%;
   flex: 1 1 420px;
   max-width: 480px;
-  margin: auto;
+  margin:20px auto 30px;
     justify-content: center;
     word-wrap: break-word;
     border: 2px solid rgba(255, 255, 255, .3);
@@ -429,7 +429,7 @@ line-height: 1.5;
 }
 
 .conteiner9 h4{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
  position: relative;
  display: flex;
  justify-content: center;
