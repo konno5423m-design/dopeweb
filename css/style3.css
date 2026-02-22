@@ -1,0 +1,122 @@
+.comparison{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.comparison h2{
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+}
+
+.comparison h4{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 14px;
+}
+
+.comparison-lead{
+  color: #666;
+  line-height: 1.8;
+  margin: 0 0 28px;
+}
+
+/* table */
+.comparison-table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+/* cells */
+.comparison-table th,
+.comparison-table td{
+  padding: 16px 18px;
+  border-bottom: 1px solid #ededed;
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+/* 1列目（項目） */
+.comparison-table td:first-child,
+.comparison-table th:first-child{
+  width: 22%;
+  background: #fafafa;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 見出し行 */
+.comparison-table th{
+  text-align: center;
+  font-weight: 800;
+}
+
+/* 当サービス 見出し */
+.comparison-table th.is-service{
+  background: #e67e22;
+  color: #fff;
+  position: relative;
+}
+
+.comparison-table th.is-service::after{
+  content: "おすすめ";
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* 当サービス 列（tdの is-service） */
+.comparison-table td.is-service{
+  background: linear-gradient(
+    180deg,
+    rgba(230,126,34,0.10) 0%,
+    rgba(230,126,34,0.04) 100%
+  );
+  font-weight: 700;
+  position: relative;
+}
+
+/* 当サービス列に縦の“柱”を立てる */
+.comparison-table th.is-service,
+.comparison-table td.is-service{
+  box-shadow: inset 4px 0 0 rgba(230,126,34,0.55);
+}
+
+/* 右列は少し控えめに */
+.comparison-table th:nth-child(3),
+.comparison-table td:nth-child(3){
+  color: #555;
+  opacity: 0.88;
+}
+
+/* 行ホバーで読みやすく */
+.comparison-table tr:hover td{
+  background-color: rgba(0,0,0,0.02);
+  transition: 0.2s ease;
+}
+.comparison-table tr:hover td.is-service{
+  background-color: rgba(230,126,34,0.13);
+}
+
+/* 最終行の下線消す */
+.comparison-table tr:last-child td{
+  border-bottom: none;
+}
+
+/* small */
+.comparison small{
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}

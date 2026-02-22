@@ -1,73 +1,46 @@
-/* ===== contact CTA ===== */
-.contact{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 56px 18px;
+.catchphrase2 {
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,.08);
+  padding: 100px 20px 40px;
+  background-color: #f8f8f8;
 }
 
-.contact p{
-  margin: 10px 0 0;
-  line-height: 1.9;
-  font-size: 16px;
+.catchphrase2 h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* ボタン配置 */
-.contact .btn{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 14px;
+.catchphrase2 h4 {
+  font-weight: normal;
+  color: #555;
+  line-height: 1.8;
 }
 
-/* 無料相談ボタン */
-.contact .contact-button{
-  display: inline-flex;
-  align-items: center;
-  gap: .4em;
+/* =====================
+  contactエリア
+===================== */
 
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 800;
-  letter-spacing: .03em;
+.contact {
+  text-align: center;
+  padding: 40px 20px 100px;
+  background-color: #f8f8f8;
+}
 
-  border: 2px solid currentColor;
-  background: transparent;
+.contact .btn {
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.contact p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.contact a {
+  color: #1e5fff;
   text-decoration: none;
-
-  transition: transform .15s ease,
-              box-shadow .15s ease,
-              background-color .15s ease;
 }
-
-/* ホバー */
-.contact .contact-button:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(0,0,0,.12);
-  background-color: rgba(0,0,0,.04);
-}
-
-/* クリック */
-.contact .contact-button:active{
-  transform: translateY(0);
-  box-shadow: 0 8px 18px rgba(0,0,0,.1);
-}
-
-/* フォーカス（キーボード操作対応） */
-.contact .contact-button:focus-visible{
-  outline: 3px solid rgba(0,0,0,.25);
-  outline-offset: 4px;
-}
-
-/* テキストリンク */
-.contact a{
-  font-weight: 700;
-}
-
-.contact a:hover{
-  text-decoration: underline;
-}
-
 /* スマホ調整 */
 @media (max-width: 480px){
   .contact{
