@@ -128,10 +128,13 @@ padding-left: 50px;
   font-size:clamp(2rem, 4vw, 3rem) ;
   margin: 0.5rem 0;
   font-weight: 500;
-padding: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+  margin: 0;
+padding: 20px 0;
+  animation: fadeIn 2s ease-out forwards;
         opacity: 0;
         line-height: 2;
+          background-color:#dbdbdb;
+
 }
 
 .catchphrase{
@@ -140,9 +143,6 @@ margin: 0 auto;
   text-align: center;
 }
 
-.catchphrase-container{
-  margin:0 0 60px 0;
-}
 
 .catchphrase h2{
   font-size: 16px;
@@ -151,6 +151,7 @@ margin: 0 auto;
 }
 
 .dope-container{
+  margin-top: 50px;
   display: inline-block;
   padding: 1.2rem;
   border-radius:12px;
@@ -177,7 +178,7 @@ margin: 0 auto;
 .note-list {
   margin: 20px auto 10px;
  list-style: none;
-  padding: 30px 20px 20px;
+  padding: 30px 20px 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* ← スマホ2列 */
   gap: 16px;
@@ -191,7 +192,7 @@ animation-delay:2.4s;
   position: relative;
   display: inline-block;
   text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 10px 50px;
     margin-top: 60px;
   }
@@ -271,7 +272,7 @@ opacity:50%;
 
 .problem-image{
   max-width: 400px;
-  margin: 20px auto;
+  margin: 0 auto;
   display: block;
 }
 
@@ -279,7 +280,7 @@ opacity:50%;
 
 
 .make {
-  padding: 20px;
+  padding: 10px 20px 20px;
   text-align: center;
 margin: 0 auto;
   position: relative;
@@ -335,6 +336,15 @@ opacity: 0.5;
   color: #555;
   margin-bottom: 40px;
   line-height: 2;
+    position: relative;
+  padding: 20px 30px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.08),
+    0 10px 20px rgba(0,0,0,0.04);
+
 }
 
 .make-cards {
