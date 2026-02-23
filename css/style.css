@@ -16,6 +16,8 @@ body {
   font-family: 'Hiragino Kaku', 'Gothic ProN', 'Noto Sans JP', 'Yu Gothic', 'sans-serif',;
   color: #222;
   background-image: url(../images/back/tidorigara2.png);
+  background-size: cover;
+  background-attachment: fixed;
   line-height: 1.7;
   padding-top: 90px;
 }
@@ -170,9 +172,9 @@ margin: 0 auto;
 
 /* ===== メモ風デザイン ===== */
 .note-list {
-  margin: 20px auto;
+  margin: 20px auto 10px;
  list-style: none;
-  padding: 30px;
+  padding: 30px 20px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* ← スマホ2列 */
   gap: 16px;
@@ -209,7 +211,7 @@ animation-delay:2.4s;
 }
 .note {
   width: 200px;
-  padding: 20px;
+  padding: 15px;
   font-size: 1rem;
   line-height: 1.4;
   box-shadow:
@@ -272,9 +274,26 @@ opacity:50%;
   padding: 20px;
   text-align: center;
 margin: 30px auto;
-
+  position: relative;
+line-height: 1.8;
 }
 
+.pazzle-image {
+  position: absolute;
+  width: 300px;
+  height: auto;
+    padding-top: 20px;
+
+  margin-top: 20px;
+  display: block;
+}
+
+.pazzle{
+  padding-top: 20px;
+  width: 80%;
+  text-align:left;
+  margin-left: 100px;
+}
 .make h2{
     text-align: left;
   color: #3c3c3c;
@@ -298,16 +317,15 @@ margin: 30px auto;
 }
 
 .make h3{
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
-
 .make-lead {
   font-size: 1rem;
   font-weight: 500;
   color: #555;
   margin-bottom: 40px;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .make-cards {
@@ -350,15 +368,18 @@ margin: 30px auto;
 
 
 .do{
-  background-image: url(../images/back/shell.jpg);
+  background-image: url(../images/back/hougan.png);
   background-position: left;
     position: relative;
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
-    padding:20px;
+    padding:40px;
   
 }
+
+
+
 .do h3{
     font-size: 1.5rem;
   font-weight: 800;
@@ -413,10 +434,9 @@ line-height: 1.5;
     padding: 28px 24px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 480px;
     width: 90%;
-  flex: 1 1 420px;
-  max-width: 480px;
+  flex: 1 1 520px;
+  max-width: 520px;
   margin:20px auto 30px;
     justify-content: center;
     word-wrap: break-word;
