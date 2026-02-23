@@ -192,7 +192,7 @@ margin: 0 auto;
 }
 
 #top-catch{
-  word-break: keep-all;
+  word-break:normal;
   font-size: 1.4rem;
   display: inline;
   line-height: 2.4;
@@ -301,17 +301,16 @@ opacity:50%;
   padding: 10px 20px 20px;
   text-align: center;
 margin: 0 auto;
-  position: relative;
 line-height: 1.8;
+height: auto;
 }
 
 .pazzle-image {
-  position: absolute;
- width: 250px;
+  width: 200px;
   height: auto;
     padding-top: 20px;
 opacity: 0.5;
-  margin-top: 20px;
+  margin-left: 50%;
   display: block;
 }
 
@@ -320,7 +319,7 @@ opacity: 0.5;
   padding-right: 10px;
   width: 80%;
   text-align:left;
-  margin-left: 20%;
+  margin: auto;
 }
 .make h2{
     text-align: left;

@@ -82,6 +82,14 @@ text-align: center;
   padding-right: 100px;
 text-align: right;
 }
+.pazzle-image {
+  width: 200px;
+  height: auto;
+    padding-top: 20px;
+opacity: 0.5;
+  display: block;
+  margin-left: 70%;
+}
 
   
 }
@@ -208,19 +216,19 @@ text-align: right;
   margin: 1rem auto;
   gap:20px;
 }
-
 .pazzle-image {
-  position: absolute;
-  width: 400px;
+  width: 200px;
   height: auto;
-  margin-left: 30px;
-  margin-top: 0px;
+    padding-top: 20px;
+opacity: 0.5;
   display: block;
+  margin-left: 80%;
 }
+
 .pazzle{
   width: 80%;
   text-align:left;
-  margin-left: 20%;
+  margin-left: 25%;
 }
 .make{
   padding-bottom: 50px;
