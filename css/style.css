@@ -132,25 +132,10 @@ padding: 20px 0;
   animation: fadeIn 2s ease-out forwards;
         opacity: 0;
         line-height: 2;
-          background-color:#dbdbdb;
 
   position: relative;
 }
 
-.introduce3::after {
-  content: "";
-  position: absolute;
-
-  left: 50%;
-  bottom: -50px;
-  transform: translateX(-50%)translateY(-1px);
-
-  width: 0;
-  height: 0;
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 50px solid #dbdbdb;
-}
 
 .catchphrase{
 margin: 0 auto;
@@ -178,6 +163,10 @@ margin: 0 auto;
   padding: 25px;
 }
 
+.dope-container-pc{
+display: none;
+}
+
 .top-image{
   width: 200px;
   height: auto;
@@ -192,7 +181,7 @@ margin: 0 auto;
 }
 
 #top-catch{
-  word-break:normal;
+  word-break:break-all;
   font-size: 1.4rem;
   display: inline;
   line-height: 2.4;
