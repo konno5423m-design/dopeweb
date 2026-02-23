@@ -124,11 +124,14 @@ padding-left: 50px;
 }
 
 .introduce3 {
-  font-size:clamp(1.2rem, 4vw, 1.7rem) ;
+  text-align: center;
+  font-size:clamp(2rem, 4vw, 3rem) ;
   margin: 0.5rem 0;
+  font-weight: 500;
 padding: 0;
   animation: fadeIn 0.5s ease-out forwards;
         opacity: 0;
+        line-height: 2;
 }
 
 .catchphrase{
@@ -221,27 +224,27 @@ animation-delay:2.4s;
   transform: translateY(-10px) rotate(-2deg);
 }
 #note1{
-   background: rgba(58, 96, 146, 0.65); 
+   background: rgba(103, 127, 159, 0.65); 
  color:#ffffff;
   transform: rotate(-3deg)
 
 }
 
 #note2 {
- background: rgba(112, 33, 143, 0.65); 
+ background: rgba(147, 85, 172, 0.65); 
  color:#ffffff; 
  transform:
   rotate(-1deg);
 
 }
 #note3 {
- background: rgba(36, 103, 84, 0.65); 
+ background: rgba(83, 132, 118, 0.65); 
  color:#ffffff; 
  transform: rotate(1deg); 
 }
 
 #note4 {
- background:rgba(146, 12, 12, 0.65);
+ background:rgba(149, 75, 75, 0.65);
  color:#ffffff; 
  transform: rotate(3deg); 
 }
@@ -266,6 +269,11 @@ opacity:50%;
 
 
 
+.problem-image{
+  max-width: 400px;
+  margin: 20px auto;
+  display: block;
+}
 
 
 
@@ -273,14 +281,14 @@ opacity:50%;
 .make {
   padding: 20px;
   text-align: center;
-margin: 30px auto;
+margin: 0 auto;
   position: relative;
 line-height: 1.8;
 }
 
 .pazzle-image {
   position: absolute;
-  width: 300px;
+  max-width: 300px;
   height: auto;
     padding-top: 20px;
 
@@ -290,9 +298,10 @@ line-height: 1.8;
 
 .pazzle{
   padding-top: 20px;
+  padding-right: 10px;
   width: 80%;
   text-align:left;
-  margin-left: 100px;
+  margin-left: 20%;
 }
 .make h2{
     text-align: left;
@@ -374,7 +383,7 @@ line-height: 1.8;
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
-    padding:40px;
+    padding:15px;
   
 }
 
@@ -437,7 +446,7 @@ line-height: 1.5;
     width: 90%;
   flex: 1 1 520px;
   max-width: 520px;
-  margin:20px auto 30px;
+  margin:0 auto 20px;
     justify-content: center;
     word-wrap: break-word;
     border: 2px solid rgba(255, 255, 255, .3);
@@ -510,13 +519,21 @@ line-height: 1.5;
 }
 
 .result{
-  padding: 1rem;
-  margin: 30px auto;
+  padding: 10px;
+  margin: 5px auto;
 }
+
+.make-image {
+  width: 250px;
+  height: auto;
+  margin:0 auto;
+  display: block;
+}
+
 
 .works {
   padding: 100px 20px;
-  background: #f8f6f2;
+  background: #88b0cc;
 }
 
 .works-container {
@@ -526,7 +543,7 @@ line-height: 1.5;
 
 .works-title{
     text-align: left;
-  color: #3c3c3c;
+  color: #000000;
   font-size: 1.7rem;
   margin: 40px;
   font-weight: 500;
@@ -543,7 +560,7 @@ line-height: 1.5;
     color: #faf29b;
     font-size: 3rem;
     text-transform: uppercase;
-    content: 'seisaku';
+    content: '制作実績';
     z-index: -1;
 }
 
@@ -592,7 +609,7 @@ line-height: 1.5;
 
 .works-category {
   font-size: 14px;
-  color: #999;
+  color: #000000;
   margin-bottom: 10px;
 }
 
