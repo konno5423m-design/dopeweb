@@ -71,6 +71,8 @@ img {
   background-position: center;
   clip-path: polygon(100% 0, 100% 50%, 0% 85%, 0 100%, 0 0);
   z-index: 0;
+    animation: moyaBreath 20s ease-in-out infinite alternate;
+
 }
 
 /* うっすら黒フィルター */
@@ -81,7 +83,10 @@ img {
   background: rgba(0,0,0,0.35); /* 0.3〜0.45で調整 */
   clip-path: polygon(100% 0, 100% 50%, 0% 85%, 0 100%, 0 0); /* 同じ形にする */
   z-index: 1;
+      animation: moyaBreath 20s ease-in-out infinite alternate;
+
 }
+
 .container {
     position: relative;
     gap: 1rem;

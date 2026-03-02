@@ -1,0 +1,105 @@
+
+
+
+.about-top{
+    margin-top: -90px;
+  position: relative;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+/* 横に流れる表示窓 */
+.about-marquee{
+    padding-top: 80px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* 流れる本体 */
+.about-track{
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: aboutScroll 90s linear infinite;
+}
+
+/* ここで「指定した幅・高さの枠」を作る */
+.about-track img{
+  width: 1000px;     /* ←好きに固定 / min()でレスポンシブも可 */
+  height: 100vh;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  object-fit: cover; 
+}
+
+/* 見出し（画像の上に重ねたい場合） */
+.about-inner{
+  position: relative;
+  z-index: 1;
+  margin: 30px auto 0;
+}
+
+.about-inner{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  margin: 0;
+  text-align: center;
+  color: #000000;
+}
+
+.about-inner h2{
+    background-color: rgb(255, 249, 249,0.8);
+     font-family: "Mochiy Pop One", sans-serif;
+}
+
+
+.watashi h2{
+    text-align: left;
+      color: #a3cde6;
+  font-size: 2rem;
+  left: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+.watashi h2::after{
+      padding: 10px;
+  margin-top: 40px;
+    white-space: nowrap;
+  color: #3c3c3c;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    content: 'どーぷWEBでは';
+}
+
+
+.watashi{
+    margin-top: 100px;
+    
+    background-image: url(../images/back/moya1.png);
+    height: 100vh;
+    width: auto;
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.watashi-box{
+    top: 50px;
+    padding: 30px;
+    position: relative;
+}
+
+.jump{
+    text-align: center;
+}
+.watashi-box img{
+    max-width: 300px;
+}
+
+.make{
+    margin-top: 50px;
+}

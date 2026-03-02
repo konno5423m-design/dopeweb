@@ -71,3 +71,148 @@
     justify-content: center;
   }
 }
+
+/* ===== Contact.html ===== */
+
+
+
+/* ===== 全体 ===== */
+.contact {
+  padding: 140px 40px;
+  background: #f8fbff;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Form Card ===== */
+.contact form {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow:
+    0 25px 60px rgba(40, 80, 140, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 上にさりげない光 */
+.contact form::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(66,140,255,0.15), transparent 70%);
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+/* ===== Label ===== */
+.contact label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ===== Inputs ===== */
+.contact input,
+.contact textarea {
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #f9fbff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #3b82f6; /* ブランドブルー寄せ */
+  box-shadow: 0 0 0 5px rgba(59,130,246,0.15);
+  background: #fff;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ===== Animated Button ===== */
+.contact button {
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 100px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact button::after {
+  content: "→";
+  position: absolute;
+  right: 25px;
+  transition: transform 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(59,130,246,0.4);
+}
+
+.contact button:hover::after {
+  transform: translateX(6px);
+}
+
+.contact button:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .contact-info h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+  }
+
+  .contact-info p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .contact form {
+    padding: 60px;
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+  }
+
+}

@@ -1,18 +1,12 @@
 .hero2{
     margin-top: -90px;
-    width: 100vw;
-    height: 200px;
+    width: 100%;
+    height: 100vh;
     
-    
-    background-image:url(../images/back/kiiro.jpg);
+    background-position: center;
+    background-image:url(../images/back/price.png);
     background-size: cover;
 }
-.price-contener{
-    padding: 50px 10px;
-}
-
-
-
 
 
 
