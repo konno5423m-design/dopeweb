@@ -1,50 +1,22 @@
 .hero2{
-    margin-top: -90px;
+  margin-top: -120px;
     width: 100%;
-    height: 100vh;
-    
-    background-position: center;
+    height: 140vh;
     background-image:url(../images/back/price.png);
     background-size: cover;
+    text-align: right;
+    padding-right: 20px;
 }
 
 
 
-
-.accordion-fix-plan details {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0;
-  margin-bottom: 10px;
+.price-contener{
+  transform: translateY(250px);
+  justify-content: center;
+}
+.price-contener h2{
+line-height: 1.3;
+  font-size: 33px;
+  font-weight: 900;
 }
 
-.accordion-fix-plan summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 16px;
-  font-weight: 700;
-  cursor: pointer;
-  list-style: none;
-}
-
-.accordion-fix-plan summary::-webkit-details-marker {
-  display: none;
-}
-
-/* ＋マーク */
-.accordion-fix-plan .icon::before {
-  content: "＋";
-  font-size: 1.4rem;
-  transition: transform 0.2s ease;
-}
-
-
-.accordion-fix-plan details[open] .icon::before {
-  content: "−";
-}
-
-.accordion-fix-plan ul {
-  padding: 0 16px 14px 32px;
-  margin: 0;
-}
