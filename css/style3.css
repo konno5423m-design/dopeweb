@@ -12,19 +12,6 @@
   text-transform: uppercase;
   position: relative;
 }
-.comparison h2::before{
-    white-space: nowrap;
-    position: absolute;
-      padding-left: 30px;
-    top: -10px;
-    left:-30px;
-    color: #a3cde6;
-    font-size: 2rem;
-    text-transform: uppercase;
-    content: 'hikaku';
-    z-index: -1;
-}
-
 .comparison{
   max-width: 1100px;
   margin: 0 auto;

@@ -425,7 +425,6 @@ opacity: 0.5;
 
 
 .do{
-  background-image: url(../images/back/hougan.png);
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -450,7 +449,7 @@ opacity: 0.5;
 .conteiner9{
   border-radius: 18px;
   overflow: hidden;
-  background: rgba(255,255,255,.55);
+  background: rgba(174, 211, 201, 0.55);
   border: 1px solid rgba(0,0,0,.10);
   box-shadow: 0 14px 38px rgba(0,0,0,.10);
   transition: transform .2s ease, box-shadow .2s ease;
@@ -461,7 +460,6 @@ opacity: 0.5;
   box-shadow: 0 18px 52px rgba(0,0,0,.14);
 }
 
-/* タイトル：中央寄せ＆縦線やめて「ヘッダー帯」化 */
 .conteiner9 h4{
   margin: 0;
   padding: 16px 18px;
@@ -471,14 +469,14 @@ opacity: 0.5;
   text-align: left;
   letter-spacing: .02em;
 
-  background: rgba(0,0,0,.03);
+  background: rgba(124, 118, 118, 0.03);
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 
 /* 中身：縦レイアウトで「説明→効果→絵」まで一筆書き */
 .conteiner9-content{
-  background: transparent;          /* いまの白箱感を減らす */
+  background: transparent;      
   padding: 18px 18px 16px;
   display: flex;
   flex-direction: column;
@@ -525,9 +523,6 @@ opacity: 0.5;
 .result{
   margin: 0;
   padding: 12px 14px;
-  border-radius: 14px;
-  background: rgba(0,0,0,.06);
-  border: 1px solid rgba(0,0,0,.10);
   font-size: 13px;
   line-height: 1.65;
 }
