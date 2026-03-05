@@ -121,7 +121,6 @@ opacity: 0.5;
 
 .hero{
   position: relative;
-  padding-bottom: 100px;
   max-height: 100vh;
 }
 
@@ -255,9 +254,7 @@ opacity: 0.5;
   margin-top: 20px;
   display: block;
 }
-.dolist{
-display:flex;
-}
+
 
  .do{
     margin-top: 50px;
