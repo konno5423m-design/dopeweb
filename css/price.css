@@ -18,6 +18,7 @@
 line-height: 1.3;
   font-size: 33px;
   font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .price-comment{
@@ -27,25 +28,20 @@ line-height: 1.3;
     transform: translateY(150px);
 
 }
-
-
 .new-lead{
+  margin: 10%;
     position: relative;
-    padding: 2rem;
-    border: 3px solid #333;
-      background-color:rgb(206, 241, 219);
-  margin-right: 30%;
-  margin-top: 30px;
-  font-size: 16px;
-  padding: 20px;
-
-    box-shadow: 10px 0px 0 #333;
-    color: #333;
-    border-radius: 20px 20px 0 0;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 
-.new-lead p{    line-height: 1.5;
+.new-lead p {
+    line-height: 1.5;
+}
+
+.lead-item{
+  width: 30%;
 }
 .tab {
   margin-top: 20px;
@@ -245,10 +241,11 @@ line-height: 1.3;
 }
 
 
-
 .priceplan-inner {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 15px;
-  margin: 15px;
-border: 2px solid #ccc;
+  margin: 15px auto;
+border: 2px solid #969696;
 border-radius: 10px;
 }
