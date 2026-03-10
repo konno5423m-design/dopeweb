@@ -42,6 +42,45 @@ text-align: center;
     content: 'IITOKORO';
     z-index: -1;
 }
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+
+a.btn--about {
+  color: #ffffff;
+  background-color: #1d5286;
+  border-bottom: 7px solid #08327f;
+}
+
+a.btn--about:hover {
+  margin-top: 3px;
+  color: #ffffff;
+  background:  #1d5286;
+  border-bottom: 2px solid #08327f;
+}
+
 .container4 {
   padding: 20px 0;
 
@@ -152,6 +191,171 @@ text-align: center;
 }
 
 
+.fold-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--fold-size);
+    height: var(--fold-size);
+    background: var(--fold-color);
+    background-image: linear-gradient(to bottom left, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.2) 100%);
+
+    /* めくれ感のある影 */
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 
+ * ラベルテキスト (::after)
+ * 折り目の中に表示する
+ * クリップされた領域の内側（左下の三角形部分）に配置する必要があるため
+ * 位置調整を慎重に行う
+ */
+.fold-card::after {
+    content: attr(data-label);
+    position: absolute;
+    /* 
+     * 折り目の正方形サイズ60pxに対して、
+     * 左下半分が残る領域。
+     * 斜辺の中央付近に来るように調整。
+     */
+    top: 8px;
+    right: 8px;
+    width: 60px;
+    /* var(--fold-size)と同値 */
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /* 45度回転させて斜辺に沿わせる */
+    transform: rotate(45deg);
+
+    z-index: 11;
+    pointer-events: none;
+    /* 折り目(::before)のアニメーション設定に合わせる */
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        top 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        right 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- ホバー時のアニメーション --- */
+
+.fold-card:hover {
+    /* 全体が少し浮き上がる */
+    transform: translateY(-5px);
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.15));
+
+}
+
+.plan-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.card-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 
+ * 折り目カードのスタイル 
+ */
+.fold-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* コンテンツ位置を上揃えに変更 */
+    align-items: center;
+    width: 240px;
+    height: 320px;
+    padding: 50px 20px 30px;
+    /* 上パディングを多めに設定 */
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #333;
+    text-decoration: none;
+
+    /* 黒いボーダー */
+    border: 3px solid #333;
+
+    /* 折り目の設定 */
+    --fold-size: 60px;
+    --fold-color: #333;
+
+    /* 
+     * 右上が欠けた形状
+     * 親要素自体を切り抜くことで、borderも一緒に切り抜かれる
+     * ::before, ::after もこの領域内でしか表示されない
+     */
+    clip-path: polygon(0 0,
+            calc(100% - var(--fold-size)) 0,
+            100% var(--fold-size),
+            100% 100%,
+            0 100%);
+
+    transition: clip-path 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    /* 影（drop-shadow推奨） */
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.08));
+}
+
+
+/* コンテンツのスタイル */
+.card-icon {
+    /* アイコンエリアの高さを固定して位置ズレ防止 */
+    flex-shrink: 0;
+    /* 縮小させない */
+    width: 80px;
+    /* サイズアップ: 64px -> 80px */
+    height: 80px;
+    margin-bottom: 25px;
+    /* マージンも少し広げてゆとりを持たせる */
+    color: #333;
+    /* アイコンは白黒（黒） */
+    transition: transform 0.4s ease;
+}
+
+
+/* タイトルは色替えする */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: var(--fold-color);
+    /* タイトル色を折り目色に合わせる */
+}
+
+
+.card-new {
+    --fold-color: #E94576;
+}
+
 
 
 .menu{
@@ -188,7 +392,7 @@ text-decoration: none;
 
 }
 
-.l-wrapper_06 {
+.l-wrapper{
 padding: 50px;
   margin: 20px auto;
   width:90vw;
@@ -200,25 +404,23 @@ padding: 50px;
 }
 
 
-.card_06 {
-  
+.fold-card {
+  min-width: 300px;
+  min-height: 350px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
+    position: relative;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
 }
+
 
 .card-img_06 {
   border-radius: 5px 5px 0 0;
   max-width: 50%;
   height: 50px;
-}
-.card-content_06 {
-  padding: 8px 20px 20px;
-}
-.card-title_06 {
-  font-size: 1.6em;
-  color: #333;
-  font-weight: 700;
 }
 .card-text_06 {
   color: #777;
@@ -249,7 +451,7 @@ display: inline;
 
 }
 
-.card-content_06:hover{
+#card-content_06:hover{
    
     box-shadow: 0 8px 32px 0 #353535;
     backdrop-filter: blur(0);
@@ -258,7 +460,6 @@ display: inline;
 
 .container6{
   display: flex;
-  ;
   align-items: center;
   justify-content: center;
   text-align: center;

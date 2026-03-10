@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   background-color: aliceblue;
+  min-height: 100vh;
 }
 
 /* 横に流れる表示窓 */
@@ -31,12 +32,6 @@
   object-fit: cover; 
 }
 
-/* 見出し（画像の上に重ねたい場合） */
-.about-inner{
-  position: relative;
-  z-index: 1;
-  margin: 30px auto 0;
-}
 
 .about-inner{
   position: absolute;
@@ -44,7 +39,7 @@
   display: grid;
   place-items: center;
   z-index: 1;
-  margin: 0;
+  margin: 30px auto 0;
   text-align: center;
   color: #000000;
 }
@@ -52,21 +47,22 @@
 .about-inner h2{
     background-color: rgb(255, 249, 249,0.8);
      font-family: "Mochiy Pop One", sans-serif;
+     font-size: 2rem;
+     font-weight: 500;
 }
 
 
 .watashi h2{
-    text-align: left;
+  margin: 100px auto;
+  text-align: center;
       color: #a3cde6;
   font-size: 2rem;
-  left: 20px;
   font-weight: 700;
-  text-transform: uppercase;
-
+ text-transform: uppercase;
 }
+
 .watashi h2::after{
-      padding: 10px;
-  margin-top: 40px;
+    top: 50%;
     white-space: nowrap;
   color: #3c3c3c;
     font-size: 1.3rem;
@@ -76,9 +72,8 @@
 
 
 .watashi{
-    
     background-image: url(../images/back/moya1.png);
-    height: 100vh;
+    min-height: 90vh;
     width: auto;
     background-size: cover;     
     background-position: center; 
@@ -86,7 +81,9 @@
 }
 
 .watashi-box{
-    top: 50px;
+      background-color: rgb(255, 249, 249,0.5);
+
+    top: 0px;
     padding: 30px;
     position: relative;
 }
@@ -99,5 +96,9 @@
 }
 
 .make{
+  width: auto;
+  min-height: 100vh;
     margin-top: 50px;
 }
+
+
