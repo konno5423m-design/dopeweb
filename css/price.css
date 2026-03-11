@@ -13,9 +13,10 @@
 
 .price-contener{
   padding-right: 10%;
-  transform: translateY(280px);
+  transform: translateY(300px);
   justify-content: center;
 }
+
 .price-contener h2{
 line-height: 1.3;
   font-size: 33px;
