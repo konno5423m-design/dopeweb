@@ -365,36 +365,7 @@ opacity: 0.5;
 }
 
 
-.make-cards {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr; /* スマホ1列 */
-  gap: 20px;
-}
 
-.make-card {
-  background: rgba(255,255,255,0.8);
-  border-radius: 16px;
-  padding: 28px 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.make-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-}
-.make-card h4:first-letter {
-  font-size: 2em;
-  color: #7172ac;
-}
-.make-card p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.6;
-}
 
 .make-card:nth-child(odd) {
   transform: rotate(-0.5deg);
