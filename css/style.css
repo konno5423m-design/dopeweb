@@ -24,8 +24,8 @@ font-family: "Noto Sans JP", sans-serif;
 h1{
 
   padding-right: 30px;
-  line-height: clamp(3rem, 6vw, 6.5rem) ;
-  font-size: clamp(1.5rem, 5vw, 5rem);
+  line-height: clamp(2.3rem, 6vw, 6.5rem) ;
+  font-size: clamp(2rem, 5vw, 5rem);
   transform: translateX(80px);
 }
 
