@@ -134,15 +134,18 @@ padding-left: 50px;
 }
 .accent {
     font-size: clamp(2.5rem, 5vw, 4rem) ;
-
   color: #ffb347; /* くすみオレンジ */
   font-weight: 700;
+  background-color: #fff;
+  padding: 2px;
 }
 .introduce{
+      font-size: clamp(2.5rem, 5vw, 4rem) ;
+line-height: 1.7;
   z-index: 1;
   position: relative;
   margin-top: 130px;
-  padding-top: 10px;
+  padding: 10px 20px 0 0;
   text-align: center;
 }
 
