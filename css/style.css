@@ -30,7 +30,14 @@ h1{
 }
 
 
- p, h2, h3,h4,h5,li{
+h2{
+    margin: 0;
+    line-height:1.7;
+
+
+font-size: clamp(24px,3vw,32px);
+}
+ p,h3,h4,h5,li{
   margin: 0;
     line-height:1.7;
 
