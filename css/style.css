@@ -25,7 +25,7 @@ h1{
 
   padding-right: 30px;
   line-height: clamp(2.3rem, 6vw, 6.5rem) ;
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(1.5rem, 5vw, 5rem);
   transform: translateX(80px);
 }
 
@@ -39,7 +39,6 @@ font-size: clamp(24px,3vw,32px);
 h1,h2,h3{
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.05em;
 }
  p,h3,h4,h5,li{
   margin: 0;
@@ -117,7 +116,7 @@ padding-left: 50px;
 
 
 .hero h2 {
-  font-size: clamp(2rem, 5vw, 4rem) ;
+  font-size: clamp(2.5rem, 5vw, 4rem) ;
   font-weight:lighter;
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
   margin-top: 0px;
@@ -134,6 +133,8 @@ padding-left: 50px;
 
 }
 .accent {
+    font-size: clamp(2.5rem, 5vw, 4rem) ;
+
   color: #ffb347; /* くすみオレンジ */
   font-weight: 700;
 }
