@@ -21,11 +21,13 @@ font-family: "Noto Sans JP", sans-serif;
 }
 
 h1{
-
+position: relative;
   padding-right: 30px;
   line-height: clamp(2.3rem, 6vw, 6.5rem) ;
   font-size: clamp(1.5rem, 5vw, 5rem);
-  transform: translateX(80px);
+  transform: translateX(120px);
+    transform: translateY(-20px);
+    background-color: rgba(249, 249, 249, 0.8);
 }
 
 
@@ -55,6 +57,7 @@ img {
 
 /* ===== ファーストビュー ===== */
 .hero {
+
   margin-top: -100px;
   padding-top: 0;
   padding-bottom: 20px;
@@ -75,13 +78,13 @@ img {
   content:"";
   position:absolute;
   inset:0;
-  background-image: url('https://pa-tu.work/storage/img/posts/651682bc9fa7e.jpg');
-  background-size: cover;
+      background-image: url(../images/back/top2.png);
+background-size: cover;
   background-position: center;
 clip-path: polygon(
 40px 0,
 100% 0,
-100% calc(100% - 40px),
+100% calc(50%),
 calc(100% - 40px) 100%,
 0 100%,
 0 40px
@@ -120,6 +123,8 @@ padding-left: 50px;
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
   margin-top: 0px;
   padding-top: 10px;
+  background-color: rgba(249, 249, 249, 0.04);
+  padding: 10px;
 }
 
 .comment {
@@ -135,7 +140,6 @@ padding-left: 50px;
     font-size: clamp(2.5rem, 5vw, 4rem) ;
   color: #ffb347; /* くすみオレンジ */
   font-weight: 700;
-  background-color: #fff;
   padding: 2px;
 }
 .introduce{
@@ -146,6 +150,7 @@ line-height: 1.7;
   margin-top: 130px;
   padding: 10px 30px 0 0;
   text-align: center;
+  background-color: #dedede rgba(0,0,0,0.04);
 }
 
 .introduce3 {
