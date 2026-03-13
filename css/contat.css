@@ -1,25 +1,5 @@
 article{
-   display: flex;
-}
-
-.chat{
-  text-align: center;
-  z-index: -2;
-    background: #f8fbff;
-width: 50%;
-padding: 10%;
-}
-
-.chat h2{
-  font-size: 1.4rem;
-  margin-bottom: 40px;
-text-align: center;
-}
-
-.chat h4 {
-  font-weight: normal;
-  color: #555;
-  line-height: 1.8;
+ z-index: -9;
 }
 
 
@@ -42,7 +22,18 @@ text-align: center;
 
 .contact{
   text-align: center;
-  width: 50%;
+  width: 100%;
+}
+.chat h2{
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+text-align: center;
+}
+
+.chat h4 {
+  font-weight: normal;
+  color: #555;
+  line-height: 1.8;
 }
 
 .plane-wrap{
@@ -100,6 +91,11 @@ text-align: center;
 
 /* ===== 全体 ===== */
 .contact {
+
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+
   padding: 140px 40px;
   background: #f8fbff;
 }
@@ -107,6 +103,15 @@ text-align: center;
 .contact-inner {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.chat{
+
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 140px 40px;
+  background: #f8fbff;
 }
 
 /* ===== Form Card ===== */
@@ -212,6 +217,7 @@ text-align: center;
 
 @media (min-width: 992px) {
 
+
   .contact-inner {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -237,4 +243,19 @@ text-align: center;
     box-shadow: 0 30px 80px rgba(0,0,0,0.06);
   }
 
+.chat{
+  text-align: center;
+  z-index: -2;
+    background: #f8fbff;
+width: 50%;
+padding: 10%;
 }
+
+article{
+   display: flex;
+}
+
+
+}
+
+

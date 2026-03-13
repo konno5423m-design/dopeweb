@@ -22,12 +22,14 @@ font-family: "Noto Sans JP", sans-serif;
 
 h1{
 position: relative;
-  padding-right: 30px;
+  padding: 0px 10px 0px 10px;
   line-height: clamp(2.3rem, 6vw, 6.5rem) ;
   font-size: clamp(1.5rem, 5vw, 5rem);
-  transform: translateX(120px);
+  transform: translateX(180px);
     transform: translateY(-20px);
-    background-color: rgba(249, 249, 249, 0.8);
+      background-size: initial;
+      display: inline-block;
+     background-color: #dedede rgba(0,0,0,0.04);
 }
 
 
@@ -37,7 +39,7 @@ h2{
 font-size: clamp(24px,3vw,32px);
 }
 
-h1,h2,h3{
+h2,h3{
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
 }
@@ -47,7 +49,12 @@ h1,h2,h3{
 
 }
 
-
+a,
+a:visited,
+a:active {
+  color: #333;   /* 好きな色 */
+  text-decoration: none;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -142,7 +149,7 @@ padding-left: 50px;
   font-weight: 700;
   padding: 2px;
 }
-.introduce{
+.introduce {
       font-size: clamp(2.5rem, 5vw, 4rem) ;
 line-height: 1.7;
   z-index: 1;
@@ -150,7 +157,14 @@ line-height: 1.7;
   margin-top: 130px;
   padding: 10px 30px 0 0;
   text-align: center;
-  background-color: #dedede rgba(0,0,0,0.04);
+}
+
+.fst-cta p{
+ margin-bottom: 20px;
+}
+
+.fst-cta a{
+  margin: 10px;
 }
 
 .introduce3 {
@@ -425,6 +439,10 @@ opacity: 0.5;
   box-shadow:0 8px 24px rgba(0,0,0,0.06);
   transition:0.3s;
 }
+.conteiner9 a{
+  text-decoration: none;
+}
+
 
 .conteiner9:hover{
   transform:translateY(-5px);
