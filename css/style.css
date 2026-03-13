@@ -443,7 +443,8 @@ opacity: 0.5;
 }
 
 .campaign-text strong{
-  font-size:22px;
+  font-size:26px;
+  font-weight:800;
 }
 
 .campaign-off{
