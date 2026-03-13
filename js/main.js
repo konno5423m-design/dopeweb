@@ -29,4 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 });
+document.querySelectorAll(".faq-q").forEach(q => {
+  q.addEventListener("click", () => {
 
+    const answer = q.nextElementSibling;
+
+    if(answer.style.display === "block"){
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+
+  });
+});

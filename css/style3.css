@@ -2,37 +2,39 @@
   padding:80px 20px;
 }
 
-.faq h2{
-  text-align:center;
-  margin-bottom:40px;
-  font-size:28px;
-  letter-spacing:0.05em;
-}
-
 .container7{
   max-width:900px;
-  margin:0 auto;
+  margin:auto;
 }
 
 .question-list{
   list-style:none;
   padding:0;
-  margin:0;
 }
 
 .question-item{
-  background:#fff;
-  border-radius:12px;
-  padding:22px 24px;
-  margin-bottom:16px;
-  line-height:1.8;
-  box-shadow:0 6px 18px rgba(0,0,0,0.05);
-  font-size:15px;
+  border-bottom:1px solid #e5e5e5;
+  padding:18px 0;
 }
 
-/* Q の強調 */
-.question-item::first-line{
+.faq-q{
+  display:block;
   font-weight:700;
+  cursor:pointer;
+  position:relative;
+}
+
+.faq-q::after{
+  content:"+";
+  position:absolute;
+  right:0;
+  font-size:20px;
+}
+
+.faq-a{
+  display:none;
+  margin-top:10px;
+  line-height:1.8;
 }
 
 
