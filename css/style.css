@@ -452,6 +452,64 @@ opacity: 0.5;
   font-weight:700;
 }
 
+.flow-mini{
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.flow-mini-list{
+  max-width: 960px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.flow-mini-item{
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 28px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.flow-mini-item span{
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.flow-mini-item h3{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.flow-mini-item p{
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.flow-link{
+  display: inline-block;
+  margin-top: 28px;
+  color: #222;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #222;
+  padding-bottom: 2px;
+}
+
+@media screen and (max-width: 768px){
+  .flow-mini-list{
+    grid-template-columns: 1fr;
+  }
+}
+
 /* サービスセクション */
 .do{
   padding:80px 20px;

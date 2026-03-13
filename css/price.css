@@ -14,6 +14,7 @@
 }
 
 .price-contener h2{
+  margin-left: 20%;
   line-height: 1.3;
   font-size: 30px;
   font-weight: 900;
@@ -81,7 +82,7 @@
 .subplan-head h2,
 .support-head h2{
   margin: 0 0 18px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -144,7 +145,7 @@
 .support-card h3,
 .target-box h3{
   margin: 0 0 14px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.1;
   font-weight: 800;
 }
