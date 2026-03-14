@@ -165,8 +165,7 @@ clip-path: polygon(100% 0, 100% 53%, 0% 55%, 0 100%, 0 0);
 h1{
   z-index: 9999;
   margin-top: 0;
-  padding: 0px 100px 0 0;
-  padding-right: 100px;
+  padding:50px;
 text-align: right;
 }
   
