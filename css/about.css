@@ -94,6 +94,14 @@ text-align: left;
  font-size: 2rem;
  line-height: 1.5;
 }
+.policy-2{
+  text-align: right;
+}
+
+.policy{
+  margin: 5% 20%;
+}
+
 
 .jump{
     text-align: center;

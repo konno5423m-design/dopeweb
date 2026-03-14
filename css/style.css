@@ -546,12 +546,34 @@ margin-top: 10px;
   background:#f7f8fa;
 }
 
+.do-container{
+  text-align: center;
+}
 .do h2{
-  text-align:center;
+ position: relative;
+  display: inline-block;
+  padding: 0 45px;
   font-size:32px;
   font-weight:700;
   margin-bottom:50px;
   letter-spacing:0.08em;
+}
+.do h2:before, .do h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 44px;
+  height: 2px;
+  background-color: black;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.do h2:before {
+  left:0;
+}
+.do h2:after {
+  right: 0;
 }
 
 /* カード並び */
