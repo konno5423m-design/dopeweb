@@ -472,4 +472,31 @@ display: inline;
 }
 
 
+.photo-item{
+  position:relative;
+  display:block;
+  overflow:hidden;
+}
+
+.photo-caption{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+
+  padding:6px 12px;
+  font-size:0.8rem;
+  font-weight:600;
+  color:#fff;
+
+  background:rgba(0,0,0,0.6);
+  border-radius:6px;
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:all .35s ease;
+}
+.photo-item:hover .photo-caption{
+  opacity:1;
+  transform:translateY(0);
+}
 

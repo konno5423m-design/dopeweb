@@ -453,11 +453,39 @@ opacity: 0.5;
   color:#e46a6a;
   font-weight:700;
 }
-
+.flow-mini h2{
+ position: relative;
+  display: inline-block;
+  padding: 0 45px;
+}
+.flow-mini h2:before, .flow-mini h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 44px;
+  height: 2px;
+  background-color: black;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.flow-mini h2:before {
+  left:0;
+}
+.flow-mini h2:after {
+  right: 0;
+}
 .flow-mini{
   padding: 80px 20px;
   text-align: center;
 }
+
+.flow-mini-p{
+margin-top: 10px;
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+}
+
 
 .flow-mini-list{
   max-width: 960px;
