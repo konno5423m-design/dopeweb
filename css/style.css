@@ -22,12 +22,10 @@ font-family: "Noto Sans JP", sans-serif;
 
 h1{
 position: relative;
-  padding: 0px 10px 0px 50px;
-  line-height: clamp(2.3rem, 6vw, 6.5rem) ;
-  font-size: clamp(1.5rem, 5vw, 5rem);
-  transform: translateX(180px);
+  padding: 10px;
+  line-height: clamp(2.5rem, 6vw, 6rem) ;
+  font-size: clamp(1.5rem, 5vw,4rem);
     transform: translateY(-20px);
-      background-size: initial;
       display: inline-block;
      background-color: #dedede rgba(0,0,0,0.04);
 }
@@ -188,7 +186,7 @@ margin: 0 auto;
 }
 
 
-.catchphrase h2{
+.catchphrase h3{
   font-size: 16px;
   color: #555555;
   margin-bottom: 10px;
@@ -210,10 +208,6 @@ margin: 0 auto;
 display: none;
 }
 
-.dope-container-pc h2{
-  margin-bottom: 20px;
-  font-size: 28px;
-}
 
 
 .top-image{
@@ -250,7 +244,9 @@ display: none;
     font-weight: bold;
 }
 
-
+#top-catch-pc{
+  display: none;
+}
 
 
 /* ===== メモ風デザイン ===== */
