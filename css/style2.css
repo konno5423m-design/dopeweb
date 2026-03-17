@@ -151,8 +151,8 @@ text-align: center;
     line-height: 1.5;
 }
 
-.dope-about{
-    font-weight: 600;
+.dope-about a{
+    font-weight: 800;
     border-bottom: solid 1px;
 }
 
@@ -417,6 +417,7 @@ text-decoration: none;
 .service-link:hover{
   opacity: 0.85;
 }
+
 .l-wrapper{
 padding: 50px;
   margin: 20px auto;
