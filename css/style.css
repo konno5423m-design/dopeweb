@@ -47,7 +47,6 @@ a,
 a:visited,
 a:active {
   color: #333;   /* 好きな色 */
-  text-decoration: none;
 }
 img {
   max-width: 100%;
