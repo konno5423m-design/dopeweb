@@ -70,6 +70,7 @@
 }
 
 .make-points{
+  text-align: left;
  position: relative;
  font-family: 1rem;
   padding: 1.5rem 2rem 1.5rem 160px;
