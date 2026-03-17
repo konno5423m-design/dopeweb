@@ -400,6 +400,23 @@ text-decoration: none;
 
 }
 
+.plan-monitor-note{
+  margin-top: -6px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.service-link{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.service-link:hover{
+  opacity: 0.85;
+}
 .l-wrapper{
 padding: 50px;
   margin: 20px auto;

@@ -1,44 +1,73 @@
 .hero2{
   margin-top: -90px;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../images/back/price2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 120px 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 20px;
-
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #hero2back-parts{
-  padding-top: 100px;
-width: 300px;
+  display: block;
+  width: min(320px, 60vw);
+  margin: 0 auto 24px;
+  padding-top: 0;
 }
+
+.price-herotitle{
+  width: 100%;
+}
+
 .price-container{
   max-width: 1100px;
+  margin: 0 auto;
 }
 
 .price-container h2{
-  padding: 5px;
-  margin-right: 20px;
-  line-height: 1.5;
-  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 900;
   text-shadow: 1px 1px 2px rgba(156, 149, 149, 0.5);
   text-align: center;
 }
 
+/* =========================
+   リード文
+========================= */
+.new-plan{
+  background: #f6f3ee;
+  padding: 70px 20px 20px;
+}
 
 .new-lead{
-  margin: 60px auto;
   max-width: 960px;
-  position: relative;
-  padding: 1rem;
-  border-radius: 10px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  background: #fffdfa;
+  border: 1px solid #d8d2ca;
+  border-radius: 18px;
+}
+
+.new-lead h2{
+  margin: 0 0 18px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  line-height: 1.3;
 }
 
 .new-lead p{
-  line-height: 1.6;
+  margin: 0;
+  line-height: 1.9;
+  color: #4f4942;
 }
 
 .lead-item{
@@ -72,7 +101,7 @@ width: 300px;
 .price-kicker,
 .subplan-kicker{
   margin: 0 0 12px;
-  font-size: 20px;
+  font-size: 0.9rem;
   letter-spacing: 0.18em;
   font-weight: 700;
   color: #7f7468;
@@ -82,7 +111,7 @@ width: 300px;
 .subplan-head h2,
 .support-head h2{
   margin: 0 0 18px;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -93,7 +122,7 @@ width: 300px;
 .support-head p{
   max-width: 700px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.8;
   color: #5b544d;
 }
@@ -107,9 +136,17 @@ width: 300px;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: start;
+}
+
+.price-grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.subplan-grid,
+.support-grid{
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* =========================
@@ -121,13 +158,16 @@ width: 300px;
 .target-box,
 .subplan-note{
   background: #fffdfa;
-  border: 1px solid #d9d1c7;
+  border: 1px solid #d7e1df;
+  border-radius: 20px;
   padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .plan-card{
   position: relative;
-  min-height: 100%;
+  min-height: auto;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .plan-label,
@@ -146,7 +186,7 @@ width: 300px;
 .target-box h3{
   margin: 0 0 14px;
   font-size: 1.4rem;
-  line-height: 1.1;
+  line-height: 1.25;
   font-weight: 800;
 }
 
@@ -163,7 +203,7 @@ width: 300px;
 .sub-card-lead{
   margin: 0 0 24px;
   font-size: 0.96rem;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #5a544d;
 }
 
@@ -173,7 +213,8 @@ width: 300px;
 .plan-list,
 .sub-list,
 .target-box ul,
-.hearing-left ul{
+.hearing-left ul,
+.hearing2-left ul{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -181,7 +222,7 @@ width: 300px;
 
 .plan-list,
 .sub-list{
-  border-top: 1px solid #e8e1d8;
+  border-top: 1px solid #d7e1df;
 }
 
 .plan-list li,
@@ -189,16 +230,16 @@ width: 300px;
   position: relative;
   margin: 0;
   padding: 14px 0 14px 28px;
-  border-bottom: 1px solid #e8e1d8;
+  border-bottom: 1px solid #d7e1df;
   font-size: 0.93rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .plan-list li::before,
 .sub-list li::before{
   content: "";
   position: absolute;
-  top: 24px;
+  top: 23px;
   left: 8px;
   width: 8px;
   height: 8px;
@@ -207,13 +248,14 @@ width: 300px;
 }
 
 /* =========================
-   メインプラン
+   メインプラン共通
 ========================= */
 .plan-note{
   margin-top: 24px;
   padding: 18px;
   background: #f8f6f2;
-  border-left: 3px solid #b07d62;
+  border-left: 3px solid #1b661e;
+  border-radius: 10px;
 }
 
 .plan-note p{
@@ -223,13 +265,21 @@ width: 300px;
   color: #4e4842;
 }
 
+.plan-monitor-note{
+  margin: -6px 0 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #366fc4;
+}
+
 .plan-meta{
-  margin: 24px 0 0;
-  padding-top: 18px;
-  border-top: 1px solid #d9d1c7;
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #d7e1df;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 
 .plan-meta div{
@@ -251,13 +301,54 @@ width: 300px;
   font-weight: 600;
 }
 
-/* スタンダード（おすすめ） */
+/* =========================
+   ライト
+========================= */
+.plan-light{
+  border-top: 6px solid #b07d62;
+  background: #fff8f3;
+}
+
+.plan-light .plan-price{
+  color: #b07d62;
+}
+
+.plan-light .plan-list li::before{
+  background: #b07d62;
+}
+
+.plan-light .plan-note{
+  background: #fcf4ed;
+  border-left: 3px solid #b07d62;
+}
+
+/* =========================
+   スタンダード
+========================= */
 .plan-standard{
-  border-top: 6px solid #5f8f6f;
+  border-top: 6px solid #2f7d6e;
+  background: #f7fcfa;
+  transform: translateY(-10px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  z-index: 2;
 }
 
 .plan-standard .plan-price{
-  color: #5f8f6f;
+  color: #2f7d6e;
+}
+
+.plan-standard .plan-list li::before{
+  background: #2f7d6e;
+}
+
+.plan-standard .plan-note{
+  background: #eef8f4;
+  border-left: 3px solid #2f7d6e;
+}
+
+.plan-standard:hover{
+  transform: translateY(-14px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
 }
 
 .plan-standard .plan-badge{
@@ -266,51 +357,42 @@ width: 300px;
   right: 22px;
   display: inline-block;
   padding: 7px 14px;
-  background: #5f8f6f;
+  background: #2f7d6e;
   color: #fff;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* プレミアム（黒なし・ブラウン系） */
+/* =========================
+   プレミアム
+========================= */
 .plan-premium{
-  background: #fffdfa;
-  border: 1px solid #d8cec2;
-  border-top: 6px solid #b07d62;
-  color: #3f3833;
+  border-top: 6px solid #366fc4;
+  background: #f7f9ff;
+  color: #050736;
 }
 
 .plan-premium .plan-label,
 .plan-premium .plan-lead,
 .plan-premium .plan-note p,
 .plan-premium .plan-meta dt{
-  color: #6b6058;
+  color: #5a586b;
 }
 
 .plan-premium .plan-price{
-  color: #b07d62;
-}
-
-.plan-premium .plan-list{
-  border-top: 1px solid #e7ddd2;
-}
-
-.plan-premium .plan-list li{
-  border-bottom: 1px solid #e7ddd2;
+  color: #366fc4;
 }
 
 .plan-premium .plan-list li::before{
-  background: #b07d62;
+  background: #366fc4;
 }
 
 .plan-premium .plan-note{
-  background: #f8f3ed;
-  border-left: 3px solid #b07d62;
-}
-
-.plan-premium .plan-meta{
-  border-top: 1px solid #e7ddd2;
+  background: #f3f6fc;
+  border-left: 3px solid #366fc4;
 }
 
 /* =========================
@@ -352,7 +434,7 @@ width: 300px;
 }
 
 /* =========================
-   更新・整備プラン
+   サブカード
 ========================= */
 .sub-card-price,
 .support-card .sub-card-price{
@@ -445,7 +527,7 @@ width: 300px;
   flex: 1;
   order: -1;
   cursor: pointer;
-  padding: 1rem .5em;
+  padding: 1rem 0.5em;
   border-radius: 999px;
   margin-bottom: 1rem;
   border: 1px solid #d4c9bc;
@@ -464,6 +546,7 @@ width: 300px;
   background: #fffdfa;
   border: 1px solid #d9d1c7;
   padding: 20px;
+  border-radius: 16px;
 }
 
 .tab-item:checked + label{
@@ -481,11 +564,11 @@ width: 300px;
 ========================= */
 .nagare{
   background: #efefef;
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .nagare .wrap{
-  max-width: 360px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -531,6 +614,7 @@ width: 300px;
 .flow-card{
   background: #fff;
   border: 2px solid #000;
+  border-radius: 18px;
   padding: 40px 10px 25px;
   text-align: center;
   position: relative;
@@ -557,6 +641,7 @@ width: 300px;
   margin: 0;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.5;
 }
 
 .flow2{
@@ -571,7 +656,7 @@ width: 300px;
    ヒアリング
 ========================= */
 .flow-hearing{
-  margin-top: 120px;
+  margin: 120px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -579,47 +664,22 @@ width: 300px;
   width: min(100%, 900px);
 }
 
-.hearing-left h3{
-  font-size: 22px;
-  margin-bottom: 15px;
-  position: relative;
+.flow-list{
+  list-style: none;
+  text-align: left;
 }
 
-.hearing-left h3::after{
-  content: "";
-  display: block;
-  width: 300px;
-  height: 2px;
-  background: #333;
-  margin-top: 10px;
-}
-
-.hearing-left li{
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.hearing-left li::before{
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #7fbf7f;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 8px;
-}
-
-.hearing-right img{
-  width: 120px;
-}
 
 /* =========================
    レスポンシブ
 ========================= */
+@media (max-width: 1024px){
+  .price-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px){
-  .price-grid,
   .subplan-grid,
   .support-grid,
   .target-box ul{
@@ -628,24 +688,15 @@ width: 300px;
 }
 
 @media (max-width: 768px){
-  .hero2{
-    min-height: auto;
-    padding: 0 16px 40px;
-    text-align: left;
+
+
+
+  .new-plan{
+    padding: 56px 16px 12px;
   }
 
-  .price-contener{
-    padding: 180px 0 0;
-  }
-
-  .price-contener h2{
-    font-size: 1.8rem;
-  }
-
-  .price-comment{
-    max-width: 100%;
-    margin: 20px 0 0;
-    font-size: 0.92rem;
+  .new-lead{
+    padding: 22px 18px;
   }
 
   .price-section,
@@ -722,6 +773,14 @@ width: 300px;
     gap: 12px;
   }
 
+  .plan-standard{
+    transform: none;
+  }
+
+  .plan-standard:hover{
+    transform: none;
+  }
+
   .plan-standard .plan-badge{
     right: 16px;
   }
@@ -732,6 +791,10 @@ width: 300px;
 
   .tab-item + label{
     width: 100%;
+  }
+
+  .nagare{
+    padding: 64px 16px;
   }
 
   .flow-row{
@@ -749,7 +812,9 @@ width: 300px;
     width: 100%;
   }
 
-  .hearing-left h3::after{
+  .hearing-left h3::after,
+  .hearing2-left h3::after{
     width: 180px;
   }
+
 }
