@@ -86,6 +86,10 @@
   left: 0;
 }
 
+.make-points-title p{
+  margin:  50px;
+}
+
 .watashi{
     background-image: url(../images/back/moya1.png);
     min-height: 90vh;
