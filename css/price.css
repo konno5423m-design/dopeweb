@@ -307,6 +307,9 @@
 .plan-light{
   border-top: 6px solid #b07d62;
   background: #fff8f3;
+  margin-top: 90px;
+  padding-top: -50px;
+
 }
 
 .plan-light .plan-price{
@@ -331,6 +334,7 @@
   transform: translateY(-10px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   z-index: 2;
+    margin-top: 90px;
 }
 
 .plan-standard .plan-price{
@@ -373,6 +377,8 @@
   border-top: 6px solid #366fc4;
   background: #f7f9ff;
   color: #050736;
+    margin-top: 90px;
+
 }
 
 .plan-premium .plan-label,
