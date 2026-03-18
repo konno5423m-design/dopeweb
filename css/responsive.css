@@ -101,21 +101,16 @@ opacity: 0.5;
 .dope-container{
   display: none;
 }
+
 .dope-container-pc{
   width:90vw;
-  margin-top: 50px;
   height: auto;
   display: inline-block;
   padding: 1.2rem;
   border-radius:12px;
   background: rgba(255,255,255,0.8);
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  padding: 25px;
-  font-size: lar
 }
-
-
-
   
 }
 
