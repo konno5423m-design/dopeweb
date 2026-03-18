@@ -68,11 +68,13 @@
     text-transform: uppercase;
     content: 'どーぷWEB';
 }
+.make-points-title {
+margin-top: 30px;
+}
 
 .make-points-title h3{
   font-size: 1.5rem;
 }
-
 
 .make-points{
   text-align: left;
@@ -116,11 +118,11 @@
 text-align: left;
   padding: 10px;
  line-height: 1.5;
- font-size: 18px;
+ font-size: 1rem;
 }
 
 .policy{
-  padding: 10% 3%;
+  padding: 5% 3%;
 }
 
 
@@ -187,7 +189,7 @@ text-align: left;
 }
 .make-card h4:first-letter {
   font-size: 2em;
-  color: #7172ac;
+  color: #126d8f;
 }
 .make-card p {
   font-size: 0.9rem;
