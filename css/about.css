@@ -69,18 +69,23 @@
     content: 'どーぷWEB';
 }
 
+.make-points-title h3{
+  font-size: 1.5rem;
+}
+
+
 .make-points{
   text-align: left;
  position: relative;
- font-family: 1rem;
-  padding: 1.5rem 2rem 1.5rem 160px;
+   font-size: 5rem;
+  padding: 1.5rem 0.5rem 1.5rem 5.5rem;
   border-bottom: 3px solid #000;
 }
 
 .make-points span {
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1;
   position: absolute;
   bottom: -1.6rem;
@@ -102,25 +107,20 @@
 
 .watashi-box{
       background-color: rgb(255, 249, 249,0.5);
-
     top: 0px;
-    padding: 40px;
+    padding: 10px 40px;
     position: relative;
 }
 
-.watashi-box h1{
-  margin-top: 20px;
+.watashi-box h3{
 text-align: left;
-  padding-right: 10%;
- font-size: 1.8rem;
+  padding: 10px;
  line-height: 1.5;
-}
-.policy-2{
-  text-align: right;
+ font-size: 18px;
 }
 
 .policy{
-  margin: 5% 10%;
+  padding: 10% 3%;
 }
 
 
