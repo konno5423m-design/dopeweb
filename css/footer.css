@@ -9,7 +9,11 @@ footer a {
   font-size: 13px;
   margin: 5px;
 }
-
+footer a,
+footer a:visited,
+footer a:active {
+  color: #ffffff;   /* 好きな色 */
+}
 footer a:hover {
   color: #000;
 }

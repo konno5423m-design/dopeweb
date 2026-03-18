@@ -54,7 +54,7 @@
 .watashi h2{
   margin: 100px auto;
   text-align: center;
-      color: #a3cde6;
+    color: rgba(163, 205, 230, 0.5);
   font-size: 2.2rem;
   font-weight: 700;
  text-transform: uppercase;
@@ -155,7 +155,7 @@ text-align: left;
     white-space: nowrap;
     position: absolute;
     top: -50%;
-    left: 20%;
+    left: 35%;
     color: rgba(163, 205, 230, 0.5);
     font-size: 2.5rem;
     text-transform: uppercase;
