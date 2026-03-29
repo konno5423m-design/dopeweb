@@ -68,3 +68,4 @@ document.querySelectorAll("a, button").forEach(el=>{
     cursor.classList.remove("active");
   });
 });
+
