@@ -447,6 +447,23 @@
   font-size:13px;
   color:#666;
 }
+.catchphrase2 {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background-color: #f8f8f8;
+}
+
+.catchphrase2 h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.catchphrase2 h4 {
+  font-weight: normal;
+  color: #555;
+  line-height: 1.8;
+}
+
 /* ===============================
    Responsive
 =================================*/
