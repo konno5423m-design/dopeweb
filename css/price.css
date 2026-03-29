@@ -534,7 +534,7 @@
    プレミアム
 ========================= */
 .plan-premium{
-  border-top: 6px solid #366fc4;
+  border-top: 6px solid #204378;;
   background: #f7f9ff;
   color: #050736;
     margin-top: 90px;
@@ -549,16 +549,16 @@
 }
 
 .plan-premium .plan-price{
-  color: #366fc4;
+  color: #204378;
 }
 
 .plan-premium .plan-list li::before{
-  background: #366fc4;
+  background: #204378;
 }
 
 .plan-premium .plan-note{
   background: #f3f6fc;
-  border-left: 3px solid #366fc4;
+  border-left: 3px solid #204378;;
 }
 
 /* =========================
