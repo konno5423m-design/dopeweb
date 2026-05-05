@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>住吉区のホームページ制作｜予約につながる導線設計｜どーぷWEB</title>
+              <link rel="stylesheet" href="css/footer.css">
+
+  <meta name="description" content="大阪市住吉区でホームページ制作をお考えの小さなお店・個人事業主の方へ。どーぷWEBでは、見た目だけでなく予約・問い合わせにつながる導線設計を重視したサイト制作を行っています。" />
+
+  <style>
+    :root {
+      --navy: #17385f;
+      --blue: #3469a8;
+      --mint: #5ff0b2;
+      --mint-soft: #e9fff5;
+      --ink: #17202a;
+      --gray: #667085;
+      --light: #f7f9fb;
+      --line: #e5edf2;
+      --white: #ffffff;
+      --radius: 20px;
+      --radius-sm: 14px;
+      --shadow: 0 12px 34px rgba(23, 56, 95, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.85;
+      letter-spacing: 0.03em;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      display: inline-block;
+      background: var(--mint);
+      padding: 1px 8px;
+      border-radius: 999px;
+      margin-left: 4px;
+      color: var(--navy);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    .hero {
+      padding: 96px 0 86px;
+      background:
+        radial-gradient(circle at 86% 18%, rgba(95, 240, 178, 0.16), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f9fbfc 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--mint);
+      border-radius: 999px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 6vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .marker {
+      background: linear-gradient(transparent 70%, var(--mint-soft) 70%);
+    }
+
+    .hero-copy {
+      font-size: 16px;
+      color: var(--gray);
+      max-width: 640px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-black {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .btn-line {
+      background: var(--white);
+      border: 1px solid var(--line);
+      color: var(--navy);
+    }
+
+    .hero-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-title {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.55;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .check-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 9px;
+      height: 9px;
+      background: var(--mint);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section.gray {
+      background: var(--light);
+    }
+
+    .section.black {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .section-head {
+      max-width: 790px;
+      margin-bottom: 38px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4.6vw, 48px);
+      line-height: 1.24;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .section.black .section-title {
+      color: var(--white);
+    }
+
+    .section-lead {
+      color: var(--gray);
+      font-size: 16px;
+    }
+
+    .black .section-lead {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .problems {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .problem-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--mint-soft);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .problem-card h3,
+    .service-card h3,
+    .price-card h3 {
+      font-size: 20px;
+      line-height: 1.45;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .problem-card p,
+    .service-card p,
+    .price-card p,
+    .work-text p,
+    .flow-card p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    .message-box {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .big-word {
+      font-size: clamp(30px, 6vw, 50px);
+      line-height: 1.06;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+    }
+
+    .big-word span {
+      color: var(--mint);
+      display: block;
+    }
+
+    .message-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      padding: 34px;
+    }
+
+    .message-card strong {
+      color: var(--mint);
+    }
+
+    .service-grid,
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card,
+    .price-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .service-tag {
+      display: inline-block;
+      background: var(--mint-soft);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .work-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .work-visual {
+      min-height: 300px;
+      border-radius: 22px;
+      background-image: url(images/works/imageaqua.png);
+      
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 26px;
+      color: var(--white);
+      font-weight: 900;
+      font-size: 26px;
+    }
+
+    .work-text h3 {
+      font-size: clamp(26px, 3.6vw, 38px);
+      line-height: 1.24;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .mini-label {
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: var(--blue);
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .flow-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-sm);
+      padding: 26px;
+    }
+
+    .flow-card .num {
+      margin-bottom: 18px;
+    }
+
+    .flow-card h3 {
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .flow-card p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--navy);
+      position: relative;
+    }
+
+    .price-card.featured::before {
+      content: "おすすめ";
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background: var(--mint);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--navy);
+      margin: 10px 0;
+    }
+
+    .note {
+      color: var(--gray);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .cta-box {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 56px 32px;
+      text-align: center;
+    }
+
+    .cta-box .eyebrow {
+      justify-content: center;
+      color: var(--white);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(28px, 4.5vw, 46px);
+      line-height: 1.24;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      color: rgba(255, 255, 255, 0.76);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-box .btn-line {
+      background: var(--white);
+    }
+
+
+    @media (max-width: 900px) {
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 66px 0 60px;
+      }
+
+      .hero-grid,
+      .message-box,
+      .work-card {
+        grid-template-columns: 1fr;
+      }
+
+      .problems,
+      .service-grid,
+      .flow-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero-panel,
+      .message-card,
+      .work-card,
+      .cta-box {
+        padding: 26px;
+        border-radius: 22px;
+      }
+
+      .work-visual {
+        min-height: 230px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="https://dope-web.jp/">どーぷ <span>Web</span></a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#problem">お悩み</a>
+        <a href="#service">サービス</a>
+        <a href="index.html#works">制作事例</a>
+        <a href="price.html">料金</a>
+        <a class="nav-cta" href="#contact">無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">大阪市住吉区のホームページ制作</p>
+          <h1>そのサイト、<br>住吉区で<br><span class="marker">選ばれてる？</span></h1>
+          <p class="hero-copy">
+            どーぷWEBは、大阪市住吉区を中心に、小さなお店・個人事業主のホームページ制作を行っています。
+            見た目だけではなく、スマホで見やすく、予約・問い合わせにつながる流れまで設計します。
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-black" href="#contact">無料でちょっと聞く</a>
+            <a class="btn btn-line" href="#works">制作事例を見る</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="panel-inner">
+            <p class="panel-title">見づらさは、静かにお客さんを逃しています。</p>
+            <ul class="check-list">
+              <li>スマホで文字が小さい</li>
+              <li>予約ボタンが見つけにくい</li>
+              <li>強みが文章で伝わっていない</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section gray" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">こんなことでお悩みの方へ</p>
+          <h2 class="section-title">ホームページはある。<br>でも、予約に変わっていない。</h2>
+          <p class="section-lead">
+            問題は「デザインが古い」だけとは限りません。
+            お客様が見たあとに、どこへ進めばいいか分からない状態になっていることがあります。
+          </p>
+        </div>
+
+        <div class="problems">
+          <div class="problem-card">
+            <div class="num">01</div>
+            <div>
+              <h3>スマホで見づらい</h3>
+              <p>地域のお客様は、ほとんどスマホで見ています。見づらいだけで、比較される前に離脱されます。</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="num">02</div>
+            <div>
+              <h3>予約までの流れが弱い</h3>
+              <p>LINE、電話、予約フォーム、Googleマップ。導線が散らかると、お客様は途中で止まります。</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="num">03</div>
+            <div>
+              <h3>選ばれる理由が見えない</h3>
+              <p>料金やメニューだけではなく、なぜそのお店を選ぶのか。強みを構造から整理します。</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="num">04</div>
+            <div>
+              <h3>地域検索に弱い</h3>
+              <p>「住吉区 ホームページ制作」「住吉区 WEB制作」など、地域名で見つかるページ設計も大切です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section black">
+      <div class="container message-box">
+        <div class="big-word">制作会社<br><span>ではなく、</span>設計パートナー。</div>
+        <div class="message-card">
+          <p>
+            どーぷWEBでは、最初に「誰に、何を伝えて、どこに進んでもらうか」を整理します。
+            きれいに作ることよりも、<strong>売上につながる導線</strong>を重視します。
+          </p>
+          <p style="margin-top: 18px;">
+            住吉区周辺の小さなお店・個人事業主の方でも相談しやすいように、直接話しながら必要な範囲だけご提案します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">サービス</p>
+          <h2 class="section-title">作るだけで終わらない。<br>お客様が動く流れを整えます。</h2>
+          <p class="section-lead">
+            ホームページ制作、既存サイト修正、LINEや予約導線の整理まで、今のお店に必要な部分から対応します。
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-tag">新規制作</span>
+            <h3>ホームページ制作</h3>
+            <p>スマホで見やすく、必要な情報が伝わるオリジナルサイトを制作します。軽くて管理しやすい静的サイトを中心に設計します。</p>
+          </article>
+          <article class="service-card">
+            <span class="service-tag">既存改善</span>
+            <h3>今あるサイトの修正</h3>
+            <p>文章・見出し・余白・ボタン・スマホ表示など、今あるサイトの弱い部分を整理して改善します。</p>
+          </article>
+          <article class="service-card">
+            <span class="service-tag">導線整理</span>
+            <h3>集客導線設計</h3>
+            <p>Instagram、Googleマップ、LINE、電話、予約フォームをつなぎ、問い合わせまでの流れを分かりやすく整えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gray" id="works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Web Works</p>
+          <h2 class="section-title">住吉区の店舗様の<br>サイト制作・導線改善。</h2>
+        </div>
+
+        <div class="work-card">
+          <div class="work-visual">リラクサロン<br>あくあ様</div>
+          <div class="work-text">
+            <p class="mini-label">リラクゼーション / 大阪市住吉区</p>
+            <h3>リラクサロン あくあ様</h3>
+            <p>
+              LINE追加による初回クーポン導線を作成し、スマホでの視認性と予約率を意識した構成へ。
+              予約システムの導入により、集客のコストダウンを可能にしました。
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-black" href="https://aqua-relax.jp" target="_blank" rel="noopener">サイトを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section black">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">ご相談から公開まで</p>
+          <h2 class="section-title">相談から制作まで、<br>一人の担当者が対応します。</h2>
+          <p class="section-lead">
+            まだ内容が固まっていなくても大丈夫です。ヒアリングしながら、必要な内容を形にしていきます。
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <div class="flow-card">
+            <div class="num">01</div>
+            <h3>無料相談</h3>
+            <p>今のサイトや集客状況を見ながら、必要な改善点を整理します。</p>
+          </div>
+          <div class="flow-card">
+            <div class="num">02</div>
+            <h3>内容整理・ご提案</h3>
+            <p>目的、ページ内容、予約導線、料金感を一緒に確認します。</p>
+          </div>
+          <div class="flow-card">
+            <div class="num">03</div>
+            <h3>制作・公開</h3>
+            <p>デザインから公開まで対応し、必要に応じて公開後の整備も行います。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="price">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">料金プラン</p>
+          <h2 class="section-title">必要な範囲だけ、<br>無駄なく始められます。</h2>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>ライトプラン</h3>
+            <p class="price">15万円〜</p>
+            <p>はじめてのホームページ制作に。必要な情報をシンプルにまとめたい方向け。</p>
+          </article>
+          <article class="price-card featured">
+            <h3>集客設計プラン</h3>
+            <p class="price">20万円〜</p>
+            <p>見やすさ、伝わりやすさ、予約導線まで整える一番バランスの良いプラン。</p>
+          </article>
+          <article class="price-card">
+            <h3>プレミアムプラン</h3>
+            <p class="price">35万円〜</p>
+            <p>問い合わせ・予約導線・販促物まで含めて、売上につながる流れを整えたい方向け。</p>
+          </article>
+        </div>
+        <p class="note">※ページ数・文章作成・外部予約システム連携・LINE整備などにより料金は変動します。</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-inner">
+            <p class="eyebrow">ひとまず無料相談</p>
+            <h2>「うちの場合はいくらくらい？」<br>そんな段階でも大丈夫です。</h2>
+            <p>
+              無理な営業はしていません。まずは現状を見た上で、必要な範囲だけご提案します。
+              住吉区周辺でホームページ制作・サイト改善を考えている方は、お気軽にご相談ください。
+            </p>
+            <div class="btn-row" style="justify-content:center;">
+              <a class="btn btn-line" href="https://dope-web.jp/#contact">無料でちょっと聞く</a>
+              <a class="btn btn-line" href="https://dope-web.jp/">どーぷWEBを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+    <div class="lg-flex md-justify-between">
+    <div>
+      <a href="index.html" class="footer__logo">
+        <img src="images/logo/DOPEimg.png" width="140" height="auto" alt="どーぷＷeb Logo" />
+      </a>
+       <p class="logo">どーぷ Web</p>
+      </address>
+    </div>
+      <div class="map">
+    <div class="hako">
+      <div>
+        <p class="footer__navi-heading">SERVICE</p>
+        <ul class="footer__navi">
+          <li><a href="price.html#price-head">サイト新規制作</a></li>
+           <li><a href="price.html#plan-fix">サイト修正</a></li>
+
+          <li><a href="price.html#support-section">サイト保守管理</a></li>
+         <li><a href="price.html#subplan-section">紙媒体作成</a></li>
+         <li><a href="diagnosis.html">サイト診断</a></li>
+
+        </ul>
+        </div>
+        </div>
+      <div class="hako2">
+        <p class="footer__navi-heading">FOLLOW ME</p>
+        <ul class="footer__navi">
+          <li><a href="https://www.instagram.com/dope.webdesign?igsh=cWc2dmhud2JrcmFk&utm_source=qr">Instagram</a></li>
+          <li><a href="https://lin.ee/yVdMhSz">LINE</a></li>
+
+        </ul>
+      </div>
+            <div class="hako2">
+              <p class="footer__navi-heading">CONTACT</p>
+              <ul class="footer__navi">
+          <li><a href="mailto:konno5423m@gmail.com">MAIL</a></li>
+          <li><a href="tel:090-5122-1977">TEL</a></li>
+        </ul>
+      </div>
+            <div class="hako2">
+        <p class="footer__navi-heading">ARER</p>
+        <ul class="footer__navi">
+          <li><a href="sumiyosi.html">住吉区</a></li>
+
+        </ul>
+      </div>
+
+  </div>
+  <hr />
+</div>
+   <div class="bottom">
+          <p class="copyright">© 2026 <a href="#">どーぷ Web </a> All Rights Reserved.</p>     
+</div>
+</footer>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69b16d527f3b731c37a6f4be/1jjeh62mr';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>
