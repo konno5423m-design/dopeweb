@@ -126,7 +126,7 @@ padding-left: 50px;
   padding: 10px;
 }
 .hero h3 {
-  font-size: clamp(2rem, 5vw, 4rem) ;
+  font-size: clamp(2rem, 5vw, 3.8rem) ;
   font-weight: 900px;
   line-height: clamp(2.4rem, 5vw, 5.5rem) ;
   margin-top: 0px;
