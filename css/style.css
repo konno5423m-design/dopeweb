@@ -358,9 +358,20 @@ opacity: 0.5;
   margin: auto;
 }
 
-.pazzle h3{
+#vision{
   margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 900;
 }
+
+#vision-p{
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  line-height: 2;
+    position: relative;
+}
+
 
 .make h3{
   font-size: 25px;
