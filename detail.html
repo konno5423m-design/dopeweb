@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ブログ記事詳細</title>
+</head>
+<body>
+    <!-- 記事のタイトルと本文が表示される箱 -->
+    <h1 id="blog-title">準備中...</h1>
+    <div id="blog-content"></div>
+
+    <script src="js/config.js"></script>
+    <script>
+        // detail.html専用の処理（URLについているIDの記事を1件だけ取ってくる）
+        const urlParams = new URLSearchParams(window.location.search);
+        const contentId = urlParams.get('contentId');
+
+        if (contentId) {
+            const apiUrl = `https://dopeblog.microcms.io/api/v1/blogs/${contentId}`;
+            fetch(apiUrl, {
+                headers: { 'X-MICROCMS-API-KEY': 'i28N45WC5BNWGLeWaGJwUpjJFdNwyjUdcEZs' }
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('blog-title').textContent = data.title;
+                document.getElementById('blog-content').innerHTML = data.content; // 本文を流し込む
+            });
+        }
+    </script>
+</body>
+</html>
