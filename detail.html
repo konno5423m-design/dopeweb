@@ -2,29 +2,93 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ記事詳細</title>
+    <style>
+        /* 簡易的な見栄えの調整（お好みに合わせてCSSファイルに移動・変更してください） */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .eyecatch-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <!-- 記事のタイトルと本文が表示される箱 -->
-    <h1 id="blog-title">準備中...</h1>
-    <div id="blog-content"></div>
 
+    <!-- 記事のタイトル -->
+    <h1 id="blog-title">読み込み中...</h1>
+    
+    <!-- アイキャッチ画像を表示するエリア -->
+    <div class="eyecatch-wrapper">
+        <img id="blog-eyecatch" src="" alt="アイキャッチ画像" style="display: none;">
+    </div>
+
+    <!-- 記事の本文 -->
+    <div id="blog-content" class="content"></div>
+
+    <!-- JSファイルの読み込み（必要に応じて） -->
     <script src="js/config.js"></script>
+    
     <script>
-        // detail.html専用の処理（URLについているIDの記事を1件だけ取ってくる）
+        // URLのパラメータから記事のID（contentId）を拾う
         const urlParams = new URLSearchParams(window.location.search);
         const contentId = urlParams.get('contentId');
 
         if (contentId) {
+            // 元の dopeblog のURL
             const apiUrl = `https://dopeblog.microcms.io/api/v1/blogs/${contentId}`;
+
             fetch(apiUrl, {
-                headers: { 'X-MICROCMS-API-KEY': 'i28N45WC5BNWGLeWaGJwUpjJFdNwyjUdcEZs' }
+                headers: { 
+                    // 元のAPIキー
+                    'X-MICROCMS-API-KEY': 'i28N45WC5BNWGLeWaGJwUpjJFdNwyjUdcEZs' 
+                }
             })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error('記事の取得に失敗しました');
+                return res.json();
+            })
             .then(data => {
-                document.getElementById('blog-title').textContent = data.title;
-                document.getElementById('blog-content').innerHTML = data.content; // 本文を流し込む
+                // 1. タイトルを表示
+                if (document.getElementById('blog-title')) {
+                    document.getElementById('blog-title').textContent = data.title;
+                }
+                
+                // 2. アイキャッチ画像を表示（データがある場合のみ）
+                const eyecatchImg = document.getElementById('blog-eyecatch');
+                if (data.eyecatch && data.eyecatch.url && eyecatchImg) {
+                    eyecatchImg.src = data.eyecatch.url;
+                    eyecatchImg.style.display = 'block'; // 非表示を解除して表示する
+                }
+
+                // 3. 本文（HTML）を流し込む
+                if (document.getElementById('blog-content')) {
+                    document.getElementById('blog-content').innerHTML = data.content;
+                }
+            })
+            .catch(error => {
+                console.error('エラー:', error);
+                document.getElementById('blog-title').textContent = '記事を読み込めませんでした';
             });
+        } else {
+            document.getElementById('blog-title').textContent = '記事のIDが見つかりません';
         }
     </script>
 </body>

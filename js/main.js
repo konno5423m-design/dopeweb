@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 4. microCMSから【ブログ記事一覧】を取得する処理 ---
+  // --- 4. microCMSから【ブログ記事一覧】を取得する処理（元の設定に戻しました） ---
   const apiUrl = `https://dopeblog.microcms.io/api/v1/blogs`;
 
   fetch(apiUrl, {
     headers: {
-      'X-MICROCMS-API-KEY': 'i28N45WC5BNWGLeWaGJwUpjJFdNwyjUdcEZs'
+      'X-MICROCMS-API-KEY': 'i28N45WC5BNWGLeWaGJwUpjJFdNwyjUdcEZs' // 元のAPIキー
     }
   })
   .then(response => {
@@ -79,21 +79,33 @@ document.addEventListener('DOMContentLoaded', () => {
     return response.json();
   })
   .then(data => {
-    // 新しいブログ用の箱（id="blog-list"）を取得します
     const listElement = document.getElementById('blog-list');
     if (!listElement) return;
     
     listElement.innerHTML = ''; // 「準備中...」を消す
 
-    // ブログ記事をループで回して、リンク付きで画面に追加します
+    // ブログ記事の一覧をループで回して画面に追加する
     data.contents.forEach(blog => {
       const li = document.createElement('li');
       const a = document.createElement('a');
       
-      // クリックしたら詳細ページに飛ぶリンク（推せるようになります！）
-a.href = `detail.html?contentId=${blog.id}`; 
-     a.textContent = blog.title; 
-     // 「（サンプル）まずはこの記事を開きましょう」が表示されます
+      // クリックしたら詳細ページ（detail.html）に飛ぶリンク
+      a.href = `detail.html?contentId=${blog.id}`; 
+      
+      // アイキャッチ画像用の <img> タグを作ります
+      if (blog.eyecatch && blog.eyecatch.url) {
+        const img = document.createElement('img');
+        img.src = blog.eyecatch.url;
+        img.alt = blog.title;
+        img.style.width = '150px'; // 横幅を150pxに指定
+        img.style.display = 'block';
+        a.appendChild(img); // リンクの中に画像を入れる
+      }
+      
+      // タイトルの文字もリンクの中に追加
+      const titleSpan = document.createElement('span');
+      titleSpan.textContent = blog.title;
+      a.appendChild(titleSpan);
       
       li.appendChild(a);
       listElement.appendChild(li);
