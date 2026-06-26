@@ -69,3 +69,31 @@ document.querySelectorAll("a, button").forEach(el=>{
   });
 });
 
+// 1. URLからプレビュー用の情報を自動で読み取る
+const urlParams = new URLSearchParams(window.location.search);
+const contentId = urlParams.get('contentId') || 'k8kpwrm_c'; 
+const draftKey = urlParams.get('draftKey');
+
+// 2. config.js に書いた「SERVICE_ID」を使ってURLを組み立てる
+let apiUrl = `https://${MICROCMS_CONFIG.SERVICE_ID}.microcms.io/api/v1/blogs/${contentId}`;
+
+if (draftKey) {
+  apiUrl += `?draftKey=${draftKey}`;
+}
+
+// 3. microCMSからデータを取得する
+fetch(apiUrl, {
+  headers: {
+    // 🔑 config.js に書いた「API_KEY」をここで自動的に読み込みます
+    'X-MICROCMS-API-KEY': MICROCMS_CONFIG.API_KEY 
+  }
+})
+.then(response => response.json())
+.then(data => {
+  // HTMLの箱に流し込む
+  document.getElementById('blog-title').textContent = data.title;
+  document.getElementById('blog-content').innerHTML = data.content;
+})
+.catch(error => {
+  console.error('読み込み失敗:', error);
+});
